@@ -3,5 +3,11 @@ Thank you Mrs. Carlson for all the work you've done for us this past year! It's 
 
 From:
     Michael Leong
+    Rahil Prakash
+    Brandon Lee
     Edward Lau
-    Krystal Kwan
+    Jonathan Sutan
+
+Special Thanks to:
+    Krystal Kwan (Mentoring)
+    Edmund Chua (Script)
