@@ -6,7 +6,7 @@ From:
     Rahil Prakash,
     Brandon Lee,
     Edward Lau,
-    Jonathan Sutan,
+    Johnathan Sutan,
     Hannah Li
 
 Special Thanks to:
