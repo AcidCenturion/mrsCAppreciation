@@ -7,6 +7,7 @@ From:
     Brandon Lee,
     Edward Lau,
     Jonathan Sutan,
+    Hannah Li
 
 Special Thanks to:
     Krystal Kwan (Mentoring)
