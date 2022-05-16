@@ -8,6 +8,7 @@ public class Player {
     //Create the objects to each class
     Bedroom bedroomScene = new Bedroom();
     Nightstand bedStand = new Nightstand();
+    Wardrobe bedWardrobe = new Wardrobe();
 
     //Store where the player is located. Default value at the starting location
     String location = "Bedroom";
@@ -37,11 +38,21 @@ public class Player {
                 location = bedroomScene.interactables();
             }
 
+            //Call interactables from the Nightstand
             else if(location.equals("Nightstand")){
 
                 //Call the interactables method
                 //Redefine the location using the method return
                 location = bedStand.interactables();
+            }
+
+            //Call interactables from the Wardrobe
+            else if(location.equals("Wardrobe")){
+
+                //call the interactables method
+                //redefine the location using the method return
+                boolean tempKeyVar = false;
+                location = bedWardrobe.interactables(tempKeyVar);
             }
         }
     }
