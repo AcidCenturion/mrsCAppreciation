@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Player {
     /* This class holds the information about the player, like the player's location.
      * The game method depend on where the player is located.
@@ -25,7 +27,30 @@ public class Player {
     public void game(){
 
         //Print the Dream scene
-        System.out.println("Dream sequence");
+        System.out.println("Dream sequence...");
+        System.out.println();
+
+        //introduce player to controls by having them wake up
+        //create scanner object
+        Scanner myScan = new Scanner(System.in);
+
+        //inform user
+        System.out.println("1. Wake Up");
+
+        //receive user input
+        String userInput = myScan.nextLine();
+        System.out.println();
+
+        //make sure the user understands that they have to type the exact option
+        while(!userInput.equals("Wake Up")){
+
+            //Inform the user to try again
+            System.out.println("Please input an option exactly as specified");
+
+            //Scan again for new user input
+            userInput = myScan.nextLine();
+            System.out.println();
+        }
 
         //Check to if the player has reached an ending
         while(!(location.equals("ChickenEnd") || location.equals("RabbitEnd") || location.equals("TrueEnd"))){

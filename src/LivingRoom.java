@@ -35,11 +35,14 @@ public class LivingRoom {
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
+        System.out.println("Living Room details...");
+
         //difference if passage unlocked
         if(passageUnlocked){
 
-            //detail the new unlocked passage
+            //detail the new unlocked passage if unlocked
             System.out.println("Unlocked passage details...");
+            System.out.println();
             System.out.println("Where would you like to go?");
             System.out.println("1. Backyard     2. Utilities Room    3. Dining Room    4. Bedroom    5. Unlocked Passage");
         }
@@ -47,14 +50,15 @@ public class LivingRoom {
         //if the passage is not unlocked, print the normal details
         else{
 
-            //detail the room
-            System.out.println("Living Room details...");
+            //Ask user where they desire to go
+            System.out.println();
             System.out.println("Where would you like to go?");
             System.out.println("1. Backyard    2. Utilities Room    3. Dining Room    4. Bedroom");
         }
 
         //Receive the user's input
         String userInput = myScan.nextLine();
+        System.out.println();
 
         //Check that the user inputted an acceptable input to move to a different scene
         //If it was not, ask for a new input until a proper input is given
@@ -73,6 +77,7 @@ public class LivingRoom {
 
             //Scan again for new user input
             userInput = myScan.nextLine();
+            System.out.println();
         }
 
         //Return the new location that the user specified

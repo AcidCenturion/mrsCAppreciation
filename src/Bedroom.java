@@ -36,11 +36,13 @@ public class Bedroom {
 
         //Detail the room. This String is printed every time the user enters the room
         System.out.println("Bedroom details...");
+        System.out.println();
         System.out.println("Where would you like to go?");
         System.out.println("1. Bed    2. Window    3. Nightstand    4. Wardrobe    5. Living Room");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
+        System.out.println();
 
         //Check that the user inputted an acceptable input to move to a different scene
         //If it was not, ask for a new input until a proper input is given
@@ -58,6 +60,7 @@ public class Bedroom {
                 //Determine where the player wants to go next
                 System.out.println("1. Bed    2. Window    3. Nightstand    4. Wardrobe    5. Living Room");
                 userInput = myScan.nextLine();
+                System.out.println();
             }
 
             //If the input was the Window dead-end scenes,
@@ -70,6 +73,7 @@ public class Bedroom {
                 //Determine where the player wants to go next
                 System.out.println("1. Bed    2. Window    3. Nightstand    4. Wardrobe    5. Living Room");
                 userInput = myScan.nextLine();
+                System.out.println();
             }
 
             //If an input was given that is not an option in this room, ask for a new input again
@@ -80,6 +84,7 @@ public class Bedroom {
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();
+                System.out.println();
             }
         }
 

@@ -24,11 +24,13 @@ public class Wardrobe {
 
         //Detail the room. This String is printed every time the user enters the room
         System.out.println("Wardrobe details...");
+        System.out.println();
         System.out.println("Where would you like to go?");
         System.out.println("1. Keyhole    2. Return to Bedroom");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
+        System.out.println();
 
         //Check that the user inputted an acceptable input to move to a different scene
         //If it was not, ask for a new input until a proper input is given
@@ -62,8 +64,11 @@ public class Wardrobe {
                 }
 
                 //Determine where the player wants to go next
+                System.out.println();
+                System.out.println("What would you like to do?");
                 System.out.println("1. Keyhole    2. Return to Bedroom");
                 userInput = myScan.nextLine();
+                System.out.println();
             }
 
             //If an input was given that is not an option in this scene, ask for a new input again
@@ -74,6 +79,7 @@ public class Wardrobe {
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();
+                System.out.println();
             }
         }
 

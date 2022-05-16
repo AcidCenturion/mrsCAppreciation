@@ -24,11 +24,13 @@ public class Nightstand {
 
         //Detail the room. This String is printed every time the user enters the room
         System.out.println("Nightstand details...");
+        System.out.println();
         System.out.println("Where would you like to go?");
         System.out.println("1. Letter    2. Flashlight    3. Return to Bedroom");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
+        System.out.println();
 
         //Check that the user inputted an acceptable input to move to a different scene
         //If it was not, ask for a new input until a proper input is given
@@ -41,11 +43,14 @@ public class Nightstand {
             if(userInput.equals("Letter")){
 
                 //Print the dialogue about the Letter
-                System.out.println("Letter details...");
+                System.out.println("Letter details... You put down the letter and look back at the rest of the Nightstand.");
 
                 //Determine where the player wants to go next
+                System.out.println();
+                System.out.println("What would you like to do?");
                 System.out.println("1. Letter    2. Flashlight    3. Return to Bedroom");
                 userInput = myScan.nextLine();
+                System.out.println();
             }
 
             //If the input was the Flashlight dead-end scenes,
@@ -53,14 +58,19 @@ public class Nightstand {
             else if(userInput.equals("Flashlight")){
 
                 //Print the dialogue about the Nightstand
-                System.out.println("Flashlight details... You obtained the Flashlight");
+                System.out.println("Flashlight details...");
+                System.out.println("You obtained the Flashlight.");
+                System.out.println("You look back at the rest of the Nightstand.");
 
                 //Update flashlight variable to reflect that the player now has the flashlight
                 flashlight = true;
 
                 //Determine where the player wants to go next
+                System.out.println();
+                System.out.println("What would you like to do?");
                 System.out.println("1. Letter    2. Flashlight    3. Return to Bedroom");
                 userInput = myScan.nextLine();
+                System.out.println();
             }
 
             //If an input was given that is not an option in this room, ask for a new input again
@@ -71,6 +81,7 @@ public class Nightstand {
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();
+                System.out.println();
             }
         }
 
