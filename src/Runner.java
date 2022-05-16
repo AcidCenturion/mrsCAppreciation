@@ -7,5 +7,8 @@ public class Runner {
 
         /* Run the method to play the game */
         playGame.game();
+
+        //test code
+        System.out.println("End of Game");
     }
 }
