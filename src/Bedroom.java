@@ -45,7 +45,7 @@ public class Bedroom {
         //Check that the user inputted an acceptable input to move to a different scene
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Bed, Window
-        //Options to move to a different scene: Door, Nightstand, Wardrobe (Key Item Required)
+        //Options to move to a different scene: Living Room, Nightstand, Wardrobe (Key Item Required)
         while(!(userInput.equals("Living Room") || userInput.equals("Nightstand") || userInput.equals("Wardrobe"))){
 
             //If the input was the Bed dead-end scenes,
