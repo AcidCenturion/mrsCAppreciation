@@ -13,6 +13,7 @@ public class Player {
     Wardrobe bedWardrobe = new Wardrobe();
     LivingRoom livRoom = new LivingRoom();
     UtilitiesRoom utilRoom = new UtilitiesRoom();
+    Boxes utilBoxes = new Boxes();
 
     //Store where the player is located. Default value at the starting location
     String location = "Bedroom";
@@ -78,7 +79,7 @@ public class Player {
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = bedWardrobe.interactables(utilRoom.key);
+                location = bedWardrobe.interactables(utilBoxes.key);
             }
 
             //call interactables from the Living Room
@@ -95,6 +96,14 @@ public class Player {
                 //call the interactables method
                 //redefine the location using the method return
                 location = utilRoom.interactables();
+            }
+
+            //call interactables method from the Boxes scene
+            else if(location.equals("Inspect Boxes")){
+
+                //call the interactables method
+                //redefine the location using the method return
+                location = utilBoxes.interactables();
             }
         }
     }

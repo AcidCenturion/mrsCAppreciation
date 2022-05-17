@@ -6,9 +6,6 @@ public class UtilitiesRoom {
      * about items that can be found inside this scene.
      */
 
-    //Boolean variables that store if the player has obtained the item
-    boolean key = false;
-
     /* Create method to print details about all the interactables in a scene.
      * If the player moves location, return the new location as a string
      * Return String
@@ -26,7 +23,7 @@ public class UtilitiesRoom {
         System.out.println("Utility Room details...");
         System.out.println();
         System.out.println("What would you like to do?");
-        System.out.println("1. Washing Machine    2. Dryer    3. Inspect Boxes    4. Return to Living Room");
+        System.out.println("1. Washing Machine    2. Dryer    3. Inspect Boxes    4. Living Room");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
@@ -36,7 +33,7 @@ public class UtilitiesRoom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Washing Machine, Dryer
         //Options to move to a different scene: Inspect Boxes, Return to Living Room
-        while(!(userInput.equals("Return to Living Room") || userInput.equals("Inspect Boxes"))){
+        while(!(userInput.equals("Living Room") || userInput.equals("Inspect Boxes"))){
 
             //If the input was the Washing Machine dead-end scenes,
             //detail the Washing Machine and return to the Utilities Room scene afterwards
@@ -48,7 +45,7 @@ public class UtilitiesRoom {
                 //Determine where the player wants to go next
                 System.out.println();
                 System.out.println("What would you like to do?");
-                System.out.println("1. Washing Machine    2. Dryer    3. Inspect Boxes    4. Return to Living Room");
+                System.out.println("1. Washing Machine    2. Dryer    3. Inspect Boxes    4. Living Room");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
@@ -63,7 +60,7 @@ public class UtilitiesRoom {
                 //Determine where the player wants to go next
                 System.out.println();
                 System.out.println("What would you like to do?");
-                System.out.println("1. Washing Machine    2. Dryer    3. Inspect Boxes    4. Return to Living Room");
+                System.out.println("1. Washing Machine    2. Dryer    3. Inspect Boxes    4. Living Room");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
