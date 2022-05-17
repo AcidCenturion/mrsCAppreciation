@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UnlockedBasement {
-    /* This class holds the information about the Utilities Basement Scene. This class will have a method
+    /* This class holds the information about the Unlocked Basement Scene. This class will have a method
      * detailing all the interactable objects within the room. This class will also have information
      * about items that can be found inside this scene.
      */
@@ -27,7 +27,7 @@ public class UnlockedBasement {
         if(light){
 
             //Detail the room. This String is printed every time the user enters the room
-            System.out.println("Utility Basement details...");
+            System.out.println("Unlocked Basement details...");
             System.out.println();
             System.out.println("What would you like to do?");
             System.out.println("1. Inspect Altars    2. Living Room");

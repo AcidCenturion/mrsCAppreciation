@@ -15,6 +15,7 @@ public class Player {
     UtilitiesRoom utilRoom = new UtilitiesRoom();
     Boxes utilBoxes = new Boxes();
     UnlockedBasement unlockPass = new UnlockedBasement();
+    Backyard bckyrd = new Backyard();
 
     //Store where the player is located. Default value at the starting location
     String location = "Bedroom";
@@ -118,6 +119,16 @@ public class Player {
                 //call the interactables method
                 //redefine the location using the method return
                 location = unlockPass.interactables(bedStand.flashlight, tempEgg1, tempEgg2, tempEgg3, tempEgg4);
+            }
+
+            //call interactables method from the Backyard scene
+            else if(location.equals("Backyard")){
+
+                boolean tempEgg3 = true;
+                boolean tempEgg4 = true;
+                boolean tempContact = true;
+
+                location = bckyrd.interactables(tempContact, tempEgg3, tempEgg4);
             }
         }
     }
