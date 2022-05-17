@@ -14,6 +14,7 @@ public class Player {
     LivingRoom livRoom = new LivingRoom();
     UtilitiesRoom utilRoom = new UtilitiesRoom();
     Boxes utilBoxes = new Boxes();
+    UnlockedBasement unlockPass = new UnlockedBasement();
 
     //Store where the player is located. Default value at the starting location
     String location = "Bedroom";
@@ -104,6 +105,19 @@ public class Player {
                 //call the interactables method
                 //redefine the location using the method return
                 location = utilBoxes.interactables();
+            }
+
+            //call interactables method from the Unlocked Basement scene
+            else if(location.equals("Unlocked Passage")){
+
+                boolean tempEgg1 = true;
+                boolean tempEgg2 = true;
+                boolean tempEgg3 = true;
+                boolean tempEgg4 = true;
+
+                //call the interactables method
+                //redefine the location using the method return
+                location = unlockPass.interactables(bedStand.flashlight, tempEgg1, tempEgg2, tempEgg3, tempEgg4);
             }
         }
     }
