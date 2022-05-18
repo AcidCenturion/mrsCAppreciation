@@ -28,31 +28,43 @@ public class LivingRoom {
             firstEntry = false;
 
             //Print the first entry dialogue
-            System.out.println("First Living Room Entry");
+            System.out.println("I approach the door and ready my hand on the handle. I should probably check on ");
+            System.out.println("the chicken coop just in case. I open the door and walk down the hallway. I take ");
+            System.out.println("a flight of stairs down and I find myself in the Living Room.");
         }
 
         //Create the Scanner object
         Scanner myScan = new Scanner(System.in);
 
-        //Detail the room. This String is printed every time the user enters the room
-        System.out.println("Living Room details...");
-
         //difference if passage unlocked
         if(passageUnlocked){
 
             //detail the new unlocked passage if unlocked
-            System.out.println("Unlocked passage details...");
+            System.out.println("As I return to the living room, I look around to see if anything moved. I ");
+            System.out.println("noticed an opening behind the stairs.");
+            System.out.println("I don’t remember that when I bought the house.");
+            System.out.println("The opening was just about human sized. It seemed there was another room behind ");
+            System.out.println("the opening.");
+
             System.out.println();
-            System.out.println("Where would you like to go?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Backyard     2. Utilities Room    3. Dining Room    4. Bedroom    5. Unlocked Passage");
         }
 
         //if the passage is not unlocked, print the normal details
         else{
 
+            //Detail the room. This String is printed every time the user enters the room
+            System.out.println("Directly ahead from the staircase is the Dining Room, where I keep the rabbit ");
+            System.out.println("cage. To the left of the staircase, upon the wall, is the door to the utilities ");
+            System.out.println("room. It had a lot of extra space in it so the room eventually just became a ");
+            System.out.println("place where I store my extra junk. To my right, across the room, is the sliding ");
+            System.out.println("glass door to the backyard. I can see the chicken coop standing alone in the ");
+            System.out.println("backyard.");
+
             //Ask user where they desire to go
             System.out.println();
-            System.out.println("Where would you like to go?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Backyard    2. Utilities Room    3. Dining Room    4. Bedroom");
         }
 
