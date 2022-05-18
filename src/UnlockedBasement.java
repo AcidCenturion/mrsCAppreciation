@@ -19,10 +19,6 @@ public class UnlockedBasement {
         //Create the Scanner object
         Scanner myScan = new Scanner(System.in);
 
-        //Receive the user's input
-        String userInput = myScan.nextLine();
-        System.out.println();
-
         //Does the player have the flashlight to see in the dark basement?
         if(light){
 
@@ -42,6 +38,10 @@ public class UnlockedBasement {
             System.out.println("What would you like to do?");
             System.out.println("1. Living Room");
         }
+
+        //Receive the user's input
+        String userInput = myScan.nextLine();
+        System.out.println();
 
         //Check that the user inputted an acceptable input to move to a different scene
         //If it was not, ask for a new input until a proper input is given

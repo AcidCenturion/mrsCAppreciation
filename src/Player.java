@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Player {
     /* This class holds the information about the player, like the player's location.
@@ -17,6 +18,7 @@ public class Player {
     UnlockedBasement unlockPass = new UnlockedBasement();
     Backyard bckyrd = new Backyard();
     DiningRoom dineRoom = new DiningRoom();
+    TimeUnit timer = TimeUnit.SECONDS;
 
     //Store where the player is located. Default value at the starting location
     String location = "Bedroom";
@@ -32,7 +34,24 @@ public class Player {
     public void game(){
 
         //Print the Dream scene
-        System.out.println("Dream sequence...");
+        System.out.println();
+        System.out.println("Today is the same as every other day. After I finish teaching my computer science ");
+        System.out.println("class, I head outside to the chicken coop to get some eggs for an afternoon snack. ");
+        System.out.println("I could hear buck-buck-bawk's and cluckings grow louder as I walked closer to the ");
+        System.out.println("coop. The chickens seem a little louder today than normal...");
+        System.out.println("\033[3mMaybe a coyote or fox wandered by last night and the chickens are all " +
+                "panicky now.\033[0m");
+        System.out.println("While my mind tries to find a solution, I hear a loud crashing sound. Pieces of ");
+        System.out.println("plywood whirlwind around me as a giant chicken breaches through the top of the coop.");
+        System.out.println("\033[3mWhat th--\033[0m");
+        System.out.println("I turn to run back inside the house, but then I hear an even louder crashing sound. ");
+        System.out.println("I look up to see a giant rabbit hop its way over to the giant chicken. The chicken, ");
+        System.out.println("a battle-ready challenger, stomps toward the rabbit. They look like they're about to ");
+        System.out.println("duel each other. It's like a scene from the movies, except...");
+        System.out.println("\033[3mI'm in between them\033[0m");
+        System.out.println("I try to run, but my stride length is nothing compared to the chicken's and the ");
+        System.out.println("rabbit's. The rabbit makes one more jump, and I'm right where it's about to land. As ");
+        System.out.println("I see its paw closing in on me, out of the corner of my eye I see something- an egg.");
         System.out.println();
 
         //introduce player to controls by having them wake up
@@ -48,6 +67,32 @@ public class Player {
 
         //make sure the user understands that they have to type the exact option
         while(!userInput.equals("Wake Up")){
+
+            //secret ending if the player choosese to remain asleep
+            if(userInput.equals("Snooze") || userInput.equals("Sleep")){
+                System.out.println("Instead of choosing to wake up like a normal person, which was literally the ");
+                System.out.println("only option presented to you, you chose the only other possible choice: to ");
+                System.out.println("continue sleeping. And thus, you continued to sleep... and sleep... and sleep");
+                System.out.println("... forever... and ever...");
+
+                //spam z's
+                for(int i = 0; i < 100; i++){
+
+                    //delay between spam
+                    try {
+                        //delay in seconds
+                        timer.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } //I HAVE NO CLUE WHAT A TRY CATCH IS BUT THAT IS WHAT THE IDE RECOMMENDED AND IT WORKS
+
+                    //print z
+                    System.out.println("zzz");
+                }
+
+                //end game
+                return;
+            }
 
             //Inform the user to try again
             System.out.println("Please input an option exactly as specified");
