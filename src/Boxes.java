@@ -23,10 +23,14 @@ public class Boxes {
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
-        System.out.println("Boxes details...");
+        System.out.println("For some reason, I felt like taking a closer look at the junk I left around in ");
+        System.out.println("this room. There are three main boxes that caught my attention. They look as if ");
+        System.out.println("they had been sifted through. There was a small blue box pushed a little to the ");
+        System.out.println("left, a larger red box on the right, and a very small green box further back that ");
+        System.out.println("I don’t remember ever adding to the pile.");
         System.out.println();
-        System.out.println("What would you like to do?");
-        System.out.println("1. Small Blue Box    2. Larger Red Box    3. Super Small Green Box    4. Return to Utilities Room");
+        System.out.println("What would you like to observe?");
+        System.out.println("1. Blue Box    2. Red Box    3. Green Box    4. Utilities Room");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
@@ -36,44 +40,67 @@ public class Boxes {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Small Blue Box, Larger Red Box, Super Small Green Box
         //Options to move to a different scene: Return to Utilities Room
-        while(!userInput.equals("Return to Utilities Room")){
+        while(!userInput.equals("Utilities Room")){
 
             //If the input was the Small Blue Box dead-end scenes,
             //detail the Small Blue Box and return to the Boxes scene afterwards
-            if(userInput.equals("Small Blue Box")){
+            if(userInput.equals("Blue Box")){
 
                 //Print the dialogue about the Small Blue Box
-                System.out.println("Small Blue Box details... You turn back to the rest of the boxes.");
+                System.out.println("I reach for the blue box. Its a little light, It definitely doesn't weigh the ");
+                System.out.println("same as it looks it should. The box wasn't well sealed so i managed to open ");
+                System.out.println("it up with my hands. Inside was a soft, blue, penguin plush. It was rounded ");
+                System.out.println("in shape and its head wasn't defined separate from its body. It had cute, ");
+                System.out.println("beady eyes and an upside-down yellow triangle with rounded corners for a ");
+                System.out.println("beak. I didn't know I had such an adorable toy in my house, I wonder why I ");
+                System.out.println("left it in the Utilities Room. I'll name it Onigiri.");
 
-                //Determine where the player wants to go next
+                //obtain penguin plush
+                System.out.println("You obtained Onigiri (Penguin Plush).");
+                System.out.println("It doesn't do anything. Its just really cute.");
+
+                //Determine where the player wants to go
                 System.out.println();
-                System.out.println("What would you like to do?");
-                System.out.println("1. Small Blue Box    2. Larger Red Box    3. Super Small Green Box    4. Return to Utilities Room");
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Blue Box    2. Red Box    3. Green Box    4. Utilities Room");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
 
             //If the input was the Larger Red Box dead-end scenes,
             //detail the Larger Red Box scene and return to the Boxes scene afterwards
-            else if(userInput.equals("Larger Red Box")){
+            else if(userInput.equals("Red Box")){
 
                 //Print the dialogue about the Larger Red Box
-                System.out.println("Larger Red Box details... You turn back to the rest of the boxes.");
+                System.out.println("I tried carrying the red box out of the junk pile but it was too heavy. I ");
+                System.out.println("climb through the clutter to get a peak inside the box. Instantly, a wave a ");
+                System.out.println("regret washed over me. It was my shameful instant noodles box. Filled to the ");
+                System.out.println("brim with different brands and flavors of instant noodles, this box ");
+                System.out.println("encapsulates all my past regrets. I have long since quit the ways of the ");
+                System.out.println("instant noodles, but they still fill me with shame and regret when I see ");
+                System.out.println("them. I force the box further back into the pile of boxes.");
 
                 //Determine where the player wants to go next
                 System.out.println();
-                System.out.println("What would you like to do?");
-                System.out.println("1. Small Blue Box    2. Larger Red Box    3. Super Small Green Box    4. Return to Utilities Room");
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Blue Box    2. Red Box    3. Green Box    4. Utilities Room");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
 
             //If the input was the Super Small Green Box dead-end scenes,
             //detail the Larger Red Box scene and return to the Boxes scene afterwards
-            else if(userInput.equals("Super Small Green Box")){
+            else if(userInput.equals("Green Box")){
 
                 //Print the dialogue about the Super Small Green Box
-                System.out.println("Super Small Green Box details...");
+                System.out.println("Sitting at the edge of the junk pile, practically begging to be picked up, ");
+                System.out.println("lay the small green box. I lean forward and grab the box. The green box was ");
+                System.out.println("about the size of an envelope, with a little more depth. Its nicely wrapped ");
+                System.out.println("and packaged. Was this a gift from someone? I open up the present to ");
+                System.out.println("descover the box housed a lone key. ");
+                System.out.println("\"Huh, that’s strange. I don’t quite remember leaving this here. \"");
+                System.out.println("I don’t recognize the design or pattern of the key either. I take it with ");
+                System.out.println("me just in case");
 
                 //update key information now that the player has acquired the key
                 key = true;
@@ -83,8 +110,8 @@ public class Boxes {
 
                 //Determine where the player wants to go next
                 System.out.println();
-                System.out.println("What would you like to do?");
-                System.out.println("1. Small Blue Box    2. Larger Red Box    3. Super Small Green Box    4. Return to Utilities Room");
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Blue Box    2. Red Box    3. Green Box    4. Utilities Room");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
