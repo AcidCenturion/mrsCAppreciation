@@ -23,10 +23,13 @@ public class Wardrobe {
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
-        System.out.println("Wardrobe details...");
+        System.out.println("I look inside my wardrobe to see it full of all my familiar clothes. Vibrant colors ");
+        System.out.println("from all over the spectrum fill the wardrobe. As the light from the window shines into ");
+        System.out.println("the wardrobe, I see a little glint in the left-back of the wardrobe behind my blue ");
+        System.out.println("jacket. I feel around for it and find a strange keyhole.");
         System.out.println();
-        System.out.println("Where would you like to go?");
-        System.out.println("1. Keyhole    2. Return to Bedroom");
+        System.out.println("What would you like to observe?");
+        System.out.println("1. Keyhole    2. Bedroom");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
@@ -36,7 +39,7 @@ public class Wardrobe {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Keyhole (Item opportunity)
         //Options to move to a different scene: Return to Bedroom
-        while(!userInput.equals("Return to Bedroom")){
+        while(!userInput.equals("Bedroom")){
 
             //If the input was the Keyhole dead-end scene,
             //check if the mysterious key was obtained
@@ -44,13 +47,18 @@ public class Wardrobe {
             if(userInput.equals("Keyhole")){
 
                 //Detail the keyhole
-                System.out.println("Keyhole details...");
+                System.out.println("I take a closer look at the key hole. It has a golden trim around a strangely ");
+                System.out.println("sized hole. It looks designed to prevent break-ins with the use of normal, ");
+                System.out.println("average lock picking tools and sets.");
 
                 //if the player does have the key yet
                 if(hasKey){
 
                     //inform user that they unlocked the passage
-                    System.out.println("Unlocked passage...");
+                    System.out.println("I feel around the keyhole until my mysterious key slides into the keyhole's");
+                    System.out.println("oddly shaped slot. A perfect fit. As I turn the key, the wardrobe makes a ");
+                    System.out.println("creaking sound. It sounds like the grinding of gears. I have the feeling ");
+                    System.out.println("something has been opened.");
 
                     //then unlock the passage
                     passageUnlocked = true;
@@ -60,13 +68,13 @@ public class Wardrobe {
                 else{
 
                     //inform user they will need a key
-                    System.out.println("A key is needed here...");
+                    System.out.println("Looks like I’ll need some kind of key to open this.");
                 }
 
                 //Determine where the player wants to go next
                 System.out.println();
-                System.out.println("What would you like to do?");
-                System.out.println("1. Keyhole    2. Return to Bedroom");
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Keyhole    2. Bedroom");
                 userInput = myScan.nextLine();
                 System.out.println();
             }

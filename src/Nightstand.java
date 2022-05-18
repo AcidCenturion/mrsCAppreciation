@@ -23,10 +23,13 @@ public class Nightstand {
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
-        System.out.println("Nightstand details...");
+        System.out.println("On my nightstand I always keep a glass of water, just in case I need to keep hydrated. ");
+        System.out.println("I probably won’t be needing it at all today, I can just get water from the kitchen ");
+        System.out.println("later. In the drawer I keep a spare flashlight in case power goes out. On the top of ");
+        System.out.println("my nightstand there’s… a letter? I don’t remember keeping letters on my nightstand.");
         System.out.println();
         System.out.println("Where would you like to go?");
-        System.out.println("1. Letter    2. Flashlight    3. Return to Bedroom");
+        System.out.println("1. Letter    2. Flashlight    3. Bedroom");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
@@ -36,19 +39,29 @@ public class Nightstand {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Letter, Flashlight
         //Options to move to a different scene: Return to Bedroom
-        while(!userInput.equals("Return to Bedroom")){
+        while(!userInput.equals("Bedroom")){
 
             //If the input was the Letter dead-end scenes,
             //detail the Letter and return to the Nightstand scene afterwards
             if(userInput.equals("Letter")){
 
                 //Print the dialogue about the Letter
-                System.out.println("Letter details... You put down the letter and look back at the rest of the Nightstand.");
+                System.out.println("I pick up the letter and look over the exterior it's in. The letter is poking ");
+                System.out.println("out of an envelope it was tucked in, and the envelope seems to have a little ");
+                System.out.println("bit of dirt and dust on it. It’s addressed to me, but I don’t recall receiving ");
+                System.out.println("any envelopes or letters. It’s a pretty antiquated method of communication, ");
+                System.out.println("nowadays we have email. I open the envelope and remove the letter from it. ");
+                System.out.println("The letter reads, ");
+                System.out.println("\"Hello, Mrs. Carlson. We have something important to discuss with you. After ");
+                System.out.println("you complete your morning routines to the chicken coop, we ask that you would ");
+                System.out.println("please come see us in the Dining Room\"");
+                System.out.println("It wasn't signed at all. I put down the letter and look back at the rest of ");
+                System.out.println("the nightstand.");
 
                 //Determine where the player wants to go next
                 System.out.println();
-                System.out.println("What would you like to do?");
-                System.out.println("1. Letter    2. Flashlight    3. Return to Bedroom");
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Letter    2. Flashlight    3. Bedroom");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
@@ -58,17 +71,18 @@ public class Nightstand {
             else if(userInput.equals("Flashlight")){
 
                 //Print the dialogue about the Nightstand
-                System.out.println("Flashlight details...");
+                System.out.println("You never know when you’re going to need to see in the dark. I’ll take this ");
+                System.out.println("flashlight just in case.");
                 System.out.println("You obtained the Flashlight.");
-                System.out.println("You look back at the rest of the Nightstand.");
+                System.out.println("I look back at the rest of the nightstand.");
 
                 //Update flashlight variable to reflect that the player now has the flashlight
                 flashlight = true;
 
                 //Determine where the player wants to go next
                 System.out.println();
-                System.out.println("What would you like to do?");
-                System.out.println("1. Letter    2. Flashlight    3. Return to Bedroom");
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Letter    2. Flashlight    3. Bedroom");
                 userInput = myScan.nextLine();
                 System.out.println();
             }

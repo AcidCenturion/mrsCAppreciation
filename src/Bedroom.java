@@ -28,16 +28,24 @@ public class Bedroom {
             firstEntry = false;
 
             //Print the first entry dialogue
-            System.out.println("First Bedroom Entry");
+            System.out.println("I wake in a cold sweat.");
+            System.out.println("\"That was just a dream... everything is normal. No big chickens or rabbits,\" ");
+            System.out.println("I tell myself.");
+            System.out.println();
         }
 
         //Create the Scanner object
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
-        System.out.println("Bedroom details...");
+        System.out.println("I double check the room just to make sure I'm not still in a dream like its ");
+        System.out.println("Inception or something. Everything is where I remember them to be. My queen-sized ");
+        System.out.println("bed sits in the corner of the room, just under the window to the right. To my left ");
+        System.out.println("is my nightstand where I keep emergency items on. Further past my nightstand ");
+        System.out.println("across the room is the wardrobe. In the opposite corner of the room is the door ");
+        System.out.println("to the hallway and stairs that lead to the living room.");
         System.out.println();
-        System.out.println("Where would you like to go?");
+        System.out.println("What would you like to observe?");
         System.out.println("1. Bed    2. Window    3. Nightstand    4. Wardrobe    5. Living Room");
 
         //Receive the user's input
@@ -55,9 +63,14 @@ public class Bedroom {
             if(userInput.equals("Bed")){
 
                 //Print the dialogue about the Bed
-                System.out.println("Bed details... You return to face back towards the Bedroom");
+                System.out.println("My bed is nice and fluffy. It's warm enough to get me through the winter ");
+                System.out.println("nights out here in Mooced. The blankets are in a bit of a mess due to my ");
+                System.out.println("abrupt waking from the nightmare. There’s nothing interesting here, so I ");
+                System.out.println("turn back to the room.");
+                System.out.println();
 
                 //Determine where the player wants to go next
+                System.out.println("What would you like to observe?");
                 System.out.println("1. Bed    2. Window    3. Nightstand    4. Wardrobe    5. Living Room");
                 userInput = myScan.nextLine();
                 System.out.println();
@@ -68,9 +81,13 @@ public class Bedroom {
             else if(userInput.equals("Window")){
 
                 //Print the dialogue about the Nightstand
-                System.out.println("Window Details... You return to face back towards the Bedroom");
+                System.out.println("I look outside my bedroom window. It’s a bit cloudy from the morning dew, ");
+                System.out.println("but I can still make out the cows in the field. There’s nothing interesting ");
+                System.out.println("here, so I turn back to the room.");
+                System.out.println();
 
                 //Determine where the player wants to go next
+                System.out.println("What would you like to observe?");
                 System.out.println("1. Bed    2. Window    3. Nightstand    4. Wardrobe    5. Living Room");
                 userInput = myScan.nextLine();
                 System.out.println();
