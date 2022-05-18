@@ -76,18 +76,20 @@ public class Player {
                 System.out.println("... forever... and ever...");
 
                 //spam z's
-                for(int i = 0; i < 100; i++){
+                for(int i = 0; i < 25; i++){
+                    for(int j = 0; j < 4; j++){
+                        //delay between spam
+                        try {
+                            //delay in seconds
+                            timer.sleep(4);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } //I HAVE NO CLUE WHAT A TRY CATCH IS BUT THAT IS WHAT THE IDE RECOMMENDED AND IT WORKS
 
-                    //delay between spam
-                    try {
-                        //delay in seconds
-                        timer.sleep(5);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } //I HAVE NO CLUE WHAT A TRY CATCH IS BUT THAT IS WHAT THE IDE RECOMMENDED AND IT WORKS
-
-                    //print z
-                    System.out.println("zzz");
+                        //print z
+                        System.out.println("zzzz");
+                    }
+                    System.out.println("four lines of z's... its kinda sexy....");
                 }
 
                 //end game

@@ -23,9 +23,13 @@ public class UnlockedBasement {
         if(light){
 
             //Detail the room. This String is printed every time the user enters the room
-            System.out.println("Unlocked Basement details...");
+            System.out.println("I squeeze through the opening and continue down a long flight of stairs. After ");
+            System.out.println("awhile of walking down stairs, I think I reach the bottom and arrive at what I ");
+            System.out.println("assume is a basement of sorts. I flick on my flashlight and scan the room. In ");
+            System.out.println("front of me seems to be four pedestals placed around like an altar. The room is ");
+            System.out.println("eerily empty...");
             System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Inspect Altars    2. Living Room");
         }
 
@@ -33,9 +37,14 @@ public class UnlockedBasement {
         else{
 
             //inform user
-            System.out.println("Cannot see... I'll need a light first");
+            System.out.println("I squeezed myself through the opening under the stairs and found myself before a ");
+            System.out.println("descending set of stairs. It seems this house had a locked basement this entire ");
+            System.out.println("time. Curious, I venture further down. Once I reach the bottom of the staircase, ");
+            System.out.println("I feel around for a light switch. I find something of a lever and flick it. I hear ");
+            System.out.println("the snapping of electricity. A bulb flickers on, but only momentarily. Looks like ");
+            System.out.println("I’ll need another light source.");
             System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Living Room");
         }
 
@@ -53,14 +62,15 @@ public class UnlockedBasement {
             //detail the Altars and return to the Unlocked Basement scene afterwards
             if(userInput.equals("Inspect Altars") || light){
 
-                //Print the dialogue about the Altars
-                System.out.println("Altar details...");
-
                 //if the player has all four eggs
                 if(egg1 && egg2 && egg3 && egg4){
 
                     //inform user that they unlocked the ending
-                    System.out.println("Unlocked altars...");
+                    System.out.println("Not expecting much to happen, I place the four eggs I was holding onto ");
+                    System.out.println("upon the pedestals. As I place the last one, the room begins to shake. I ");
+                    System.out.println("shine the light on the wall behind all four pedestals. The wall gave way ");
+                    System.out.println("to an opening leading to what appeared to be another hidden room. I walk ");
+                    System.out.println("cautiously into the new room.");
                     System.out.println();
 
                     //return ending
@@ -70,13 +80,14 @@ public class UnlockedBasement {
                 //if the user does not have the eggs yet
                 else{
 
-                    //inform user they will need a key
-                    System.out.println("The altars have a slight concavity on the top...");
+                    //inform user they will need an egg
+                    System.out.println("I inspected the pedestals a little closer. the pedestals appear to have ");
+                    System.out.println("a slight concavity on the top. They seem to be made to hold a rounded item.");
                 }
 
                 //Determine where the player wants to go next
                 System.out.println();
-                System.out.println("What would you like to do?");
+                System.out.println("What would you like to observe?");
                 System.out.println("1. Inspect Altars    2. Living Room");
                 userInput = myScan.nextLine();
                 System.out.println();
