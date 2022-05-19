@@ -108,6 +108,10 @@ public class Lightswitch {
             //reduce damage from next incoming attack
             playerDefend = true;
 
+            //set counter
+            //counts to zero; blocks 3 attacks
+            playerDefenseTimer = 2;
+
             //use 10 mana
             playerMana -= 10;
 
@@ -189,7 +193,7 @@ public class Lightswitch {
                 //reset buffs if any
                 enemyCharge = false;
                 enemyLockedOn = false;
-                if(playerDefenseTimer == 0){
+                if(playerDefenseTimer == 0 && playerDefend){
                     playerDefend = false;
                     System.out.println("Your defense buff wears out");
                 }
@@ -244,7 +248,7 @@ public class Lightswitch {
                 //reset buffs if any
                 enemyCharge = false;
                 enemyLockedOn = false;
-                if(playerDefenseTimer == 0){
+                if(playerDefenseTimer == 0 && playerDefend){
                     playerDefend = false;
                     System.out.println("Your defense buff wears out");
                 }
@@ -299,7 +303,7 @@ public class Lightswitch {
         playerMana = 50;
         playerCharge = false;
         playerDefend = false;
-        playerDefenseTimer = 3;
+        playerDefenseTimer = 0;
         enemyCharge = false;
         enemyLockedOn = false;
 
