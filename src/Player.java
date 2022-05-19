@@ -18,6 +18,7 @@ public class Player {
     UnlockedBasement unlockPass = new UnlockedBasement();
     Backyard bckyrd = new Backyard();
     DiningRoom dineRoom = new DiningRoom();
+    Lightswitch eggQuest3 = new Lightswitch();
     TimeUnit timer = TimeUnit.SECONDS;
 
     //Store where the player is located. Default value at the starting location
@@ -191,6 +192,16 @@ public class Player {
                 //call the interactables method
                 //redefine the location using the method return
                 location = dineRoom.interactables(tempContact, tempEgg1, tempEgg2);
+            }
+
+            //call the game from the Lightswitch scene
+            else if(location.equals("Lightswitch")){
+
+                //call the game
+                eggQuest3.runGame();
+
+                //reset player location back to dining room
+                location = "Dining Room";
             }
         }
     }

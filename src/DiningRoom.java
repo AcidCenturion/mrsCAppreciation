@@ -26,7 +26,7 @@ public class DiningRoom {
             System.out.println("Dining Room details...");
             System.out.println();
             System.out.println("What would you like to do?");
-            System.out.println("1. Windowsill    2. Rabbit Cage    3. Table    4. Living Room");
+            System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
         }
 
         //if the player has not heard from capt cluck yet
@@ -67,10 +67,10 @@ public class DiningRoom {
                 System.out.println("Czar Hops instructions...");
                 System.out.println();
 
-                //offer different options based on if the rabbits gave instructions
+                //offer different options based on if the chickens gave instructions
                 if(chickenContact){
                     System.out.println("What would you like to do?");
-                    System.out.println("1. Windowsill    2. Rabbit Cage    3. Table    4. Living Room");
+                    System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
 
                     //Receive the user's input
                     userInput = myScan.nextLine();
@@ -86,14 +86,14 @@ public class DiningRoom {
                 }
             }
 
-            //if the player chooses the egg quests, ensure that they have met the rabbits
-            else if(userInput.equals("Windowsill") && chickenContact){
+            //if the player chooses the egg quests, ensure that they have met the chickens
+            else if(userInput.equals("Lightswitch") && chickenContact){
 
                 //return the correct location
-                return "Windowsill";
+                return "Lightswitch";
             }
 
-            //ensure the rabbit contact
+            //ensure the chicken contact
             else if(userInput.equals("Rabbit Cage") && chickenContact){
 
                 //return the correct location
