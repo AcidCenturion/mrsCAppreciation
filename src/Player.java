@@ -18,6 +18,7 @@ public class Player {
     UnlockedBasement unlockPass = new UnlockedBasement();
     Backyard bckyrd = new Backyard();
     DiningRoom dineRoom = new DiningRoom();
+    FenceGate eggQuest2 = new FenceGate();
     Lightswitch eggQuest3 = new Lightswitch();
     TimeUnit timer = TimeUnit.SECONDS;
 
@@ -202,6 +203,16 @@ public class Player {
 
                 //reset player location back to dining room
                 location = "Dining Room";
+            }
+
+            //call the game from the FenceGate scene
+            else if(location.equals("Fence Gate")){
+
+                //call the game
+                eggQuest2.TTT();
+
+                //reset location
+                location = "Backyard";
             }
         }
     }
