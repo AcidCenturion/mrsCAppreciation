@@ -163,8 +163,6 @@ public class Player {
             //call interactables method from the Unlocked Basement scene
             else if(location.equals("Unlocked Passage")){
 
-                boolean tempEgg4 = true;
-
                 //call the interactables method
                 //redefine the location using the method return
                 location = unlockPass.interactables(bedStand.getFlashlight(), eggQuest1.getEgg(), eggQuest2.getEgg(),
@@ -221,6 +219,7 @@ public class Player {
             else if(location.equals("Rabbit Cage")){
 
                 //call the game
+                eggQuest4.runGame();
 
                 //reset location
                 location = "Dining Room";
@@ -262,7 +261,7 @@ public class Player {
 
         //rabbit ending
         else{
-            
+
         }
     }
 }
