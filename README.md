@@ -15,4 +15,4 @@ From, the 2021-2022 APCS Class
 
 Special Thanks to:
     Krystal Kwan
-    Edmund Chua (Script)
+    Louisa Guevarra, CJ Alejandro, Edmund Chua (Script and Dialogue)
