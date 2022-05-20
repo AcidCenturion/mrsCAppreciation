@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class FenceGate {
+    /* Chuck's Egg Quest 2 : TicTacToe*/
+
     //field
     boolean egg = false;
 

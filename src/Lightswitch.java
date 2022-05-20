@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Lightswitch {
-    /* Demonminator's Egg Quest: Combat */
+    /* Demonminator's Egg Quest 3: Combat */
 
     //fields
     boolean egg = false;

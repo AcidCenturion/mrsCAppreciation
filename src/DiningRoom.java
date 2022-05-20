@@ -9,6 +9,7 @@ public class DiningRoom {
     //Variable that knows if it is the first time a player enters a room
     //change the variable to false once the player has entered the room
     boolean firstEntry = true;
+    boolean rabbitInteraction = false;
 
     /* Create method to print details about all the interactables in a scene.
      * If the player moves location, return the new location as a string
@@ -44,6 +45,9 @@ public class DiningRoom {
         //Create the Scanner object
         Scanner myScan = new Scanner(System.in);
 
+        //inform backyard that instructions have been received
+        rabbitInteraction = true;
+
         //Has the player recieved the misssions from the chickens?
         if(chickenContact){
 
@@ -56,7 +60,7 @@ public class DiningRoom {
             System.out.println("he has some weird obsession with hoses. Chuck is probably banging his head into ");
             System.out.println("the fence gate. The dummy doesn't know how to use a door latch");
             System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
         }
 
@@ -72,7 +76,7 @@ public class DiningRoom {
             System.out.println("he has some weird obsession with hoses. Chuck is probably banging his head into ");
             System.out.println("the fence gate. The dummy doesn't know how to use a door latch\"");
             System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Table    2. Living Room");
         }
 
@@ -106,7 +110,7 @@ public class DiningRoom {
 
                 //offer different options based on if the chickens gave instructions
                 if(chickenContact){
-                    System.out.println("What would you like to do?");
+                    System.out.println("What would you like to observe?");
                     System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
 
                     //Receive the user's input
@@ -114,7 +118,7 @@ public class DiningRoom {
                     System.out.println();
                 }
                 else{
-                    System.out.println("What would you like to do?");
+                    System.out.println("What would you like to observe?");
                     System.out.println("1. Table    2. Living Room");
 
                     //Receive the user's input

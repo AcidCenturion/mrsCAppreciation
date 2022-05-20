@@ -60,7 +60,7 @@ public class Backyard {
             System.out.println("The chicken coop appears to be empty apart from Capt Cluck. It seems that if I ");
             System.out.println("want to have eggs for breakfast, I’ll just have to go along with it.");
             System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
         }
 
@@ -78,7 +78,7 @@ public class Backyard {
             System.out.println("The chicken coop appears to be empty apart from Capt Cluck. It seems that if I ");
             System.out.println("want to have eggs for breakfast, I’ll just have to go along with it.");
             System.out.println();
-            System.out.println("What would you like to do?");
+            System.out.println("What would you like to observe?");
             System.out.println("1. Chicken Coop    2. Living Room");
         }
 
@@ -116,7 +116,7 @@ public class Backyard {
 
                 //offer different options based on if the rabbits gave instructions
                 if(rabbitContact){
-                    System.out.println("What would you like to do?");
+                    System.out.println("What would you like to observe?");
                     System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
 
                     //Receive the user's input
@@ -124,7 +124,7 @@ public class Backyard {
                     System.out.println();
                 }
                 else{
-                    System.out.println("What would you like to do?");
+                    System.out.println("What would you like to observe?");
                     System.out.println("1. Chicken Coop    2. Living Room");
 
                     //Receive the user's input
