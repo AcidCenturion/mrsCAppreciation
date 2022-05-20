@@ -226,5 +226,43 @@ public class Player {
                 location = "Dining Room";
             }
         }
+
+        //print the correct ending
+        if(location.equals("TrueEnd")){
+
+            //true end from basement
+            System.out.println("Almost as soon as I step foot inside the new room, lights flick on from above. ");
+            System.out.println("I look around my surroundings. The room looks like a school classroom, but the ");
+            System.out.println("desks are arranged all in the center, like one large dining table. The table is ");
+            System.out.println("loaded with food on top. There are eggs made with all kinds of methods, like ");
+            System.out.println("hardboiled eggs, sunny-side-up eggs, scrambled eggs, omelets, etc. Seated at the ");
+            System.out.println("table are… \033[3mmy APCS students???\033[0m");
+            System.out.println("\"What are you all doing in here?\"");
+            System.out.println("\"Oh, good morning Mrs. Carlson\"");
+            System.out.println("Michael must not have gotten enough sleep again.");
+            System.out.println("\"It’s the afternoon,\" Jonathan corrected");
+            System.out.println("\"Haiya go to bed on time\" Edward chimed in. Rahil chuckles and joins in");
+            System.out.println("\"Well, anyways, thanks Mrs. Carlson for teaching us computer science. We wanted ");
+            System.out.println("to thank you by displaying what we learned in this computer science project we ");
+            System.out.println("worked on together\"");
+            System.out.println("Michael perks up again");
+            System.out.println("\"oh yeah, we left something for you in the files. The README file is a little ");
+            System.out.println("thank you note, and there’s a little bit of fun hidden in the folders. Here, ");
+            System.out.println("this might help navigate you\"");
+            System.out.println("He handed me a little slip of paper. It read, ");
+            System.out.println("\033[3mThanks to your help, 0 students failed this class. Comp sci is our #1 ");
+            System.out.println("favorite class, and we’re all going to get 5 on the AP exam. You're the #1 teacher ");
+            System.out.println("to guide all of us students to success. Thank you again, Mrs. Carlson\033[0m");
+        }
+
+        //chicken ending
+        else if(location.equals("ChickenEnd")){
+
+        }
+
+        //rabbit ending
+        else{
+            
+        }
     }
 }
