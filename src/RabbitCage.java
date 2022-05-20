@@ -76,6 +76,17 @@ public class RabbitCage {
 
     //run the game
     public void runGame() {
+
+        //introduce game
+        System.out.println("There are many rabbits in the cage, gathered together in groups. In the corner, I ");
+        System.out.println("spot a lone pink rabbit with droopy ears shuffling a deck of cards. I wonder how it ");
+        System.out.println("managed to get ahold of the cards; I do remember having a deck somewhere in the house. ");
+        System.out.println("The rabbit looks up at me as it continues shuffling the cards. Seems like this one has ");
+        System.out.println("been sitting here for some time. I walk around the cage to get a closer look. The ");
+        System.out.println("rabbit stops shuffling cards and turns towards me expectantly");
+        System.out.println("\"Hello Mrs. C! I'm Bun Bun\"");
+        System.out.println("How strange, I don't remember seeing a pink rabbit in my rabbit cage before");
+        System.out.println("\"Want to play a game of blackjack with me? If you win, I'll give you a nice prize!\"");
         //reset game
         playerHand = new ArrayList<>();
         dealerHand = new ArrayList<>();
@@ -138,18 +149,36 @@ public class RabbitCage {
         if(handScore(playerHand)>21){
             System.out.println("You busted.");
             System.out.println("Bun Bun wins.");
+            System.out.println("\"Aww...nice try. Better luck next time\"");
+            System.out.println("Bun Bun goes back to her corner of the cage and continues shuffling the deck of cards");
         }
         else if(handScore(playerHand)<=21 && handScore(dealerHand)>21){
             System.out.println("Bun Bun busted.");
             System.out.println("You win");
+            System.out.println();
+            System.out.println("\"Congrats, Mrs. C! I knew you could do it. Here, take this\"");
+            System.out.println("Bun Bun hands you an egg");
+            System.out.println("\"I suppose you know what to do with this, right?\"");
+            System.out.println();
+            System.out.println("You obtained an egg");
+            egg = true;
         }
         else{
             //general math calc
             if(handScore(playerHand)>handScore(dealerHand)){
                 System.out.println("You win");
+                System.out.println();
+                System.out.println("\"Congrats, Mrs. C! I knew you could do it. Here, take this\"");
+                System.out.println("Bun Bun hands you an egg");
+                System.out.println("\"I suppose you know what to do with this, right?\"");
+                System.out.println();
+                System.out.println("You obtained an egg");
+                egg = true;
             }
             else{
                 System.out.println("Bun Bun wins.");
+                System.out.println("\"Aww...nice try. Better luck next time\"");
+                System.out.println("Bun Bun goes back to her corner of the cage and continues shuffling the deck of cards");
             }
         }
         System.out.println();
