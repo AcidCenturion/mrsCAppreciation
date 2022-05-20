@@ -1,14 +1,18 @@
-Thank you Mrs. Carlson for all the work you've done for us this past year! It's been a joy having you teach us. We learned so much computer knowledge in APCS. This little game was a project the APCS students did together as a thank you. We hope you enjoy!
+Thank you Mrs. Carlson for all the work you've done for us this past year (past two years for us Intro to CS people)! It's been a joy having you teach us. We learned so much computer knowledge in APCS. We put this game together as a project for the APCS students to work on together as a thank you. We hope you enjoy!
     -Michael Leong
 
-From:
+From, the 2021-2022 APCS Class
     Michael Leong,
     Rahil Prakash,
-    Brandon Lee,
     Edward Lau,
     Johnathan Sutan,
-    Hannah Li
+    Bradon Lee,
+    Hannah Li,
+    Henry Lai,
+    Raymond Mok,
+    Chris Wei,
+    Yolanda Zhou
 
 Special Thanks to:
-    Krystal Kwan (Mentoring)
+    Krystal Kwan
     Edmund Chua (Script)
