@@ -116,7 +116,7 @@ public class Garden {
         System.out.println();
         System.out.println("You obtained an egg");
         System.out.println();
-        System.out.println("\033[3m... Do not bite that hand that feeds you, chicken.\033[0m");
+        System.out.println("\033[3m... Do not bite the hand that feeds you, chicken.\033[0m");
         System.out.println();
         egg = true;
     }
