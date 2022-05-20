@@ -307,6 +307,19 @@ public class Lightswitch {
         enemyCharge = false;
         enemyLockedOn = false;
 
+        System.out.println("I walk over to the light switches, and the dining room lamp flickers, then fades to ");
+        System.out.println("black. A booming voice from the light switches blasts into my ear, like a megaphone.");
+        System.out.println("\"Human! You dare approach me, the superior rabbit of rabbits, the Demonminator? ");
+        System.out.println("You must be looking for a challenge, I presume, like all other creatures who have ");
+        System.out.println("approached me before you. I'll promise you, it'll be a victorious win for me to add ");
+        System.out.println("to my own books, I'm sure of it!\"");
+        System.out.println("The dining room lamp switches back on, and I see a rabbit where the light switch is. ");
+        System.out.println("Huh, this one must the culprit for the flickering lights...");
+        System.out.println("\"Oi, two-legged peasant! Look at me, not at the lowly light switches behind me.\"");
+        System.out.println("I snap back to look at the rabbit and notice its beady eyes glaring back at me.");
+        System.out.println("\"I shall accept your challenge. Brace yourself for defeat, for today I will emerge ");
+        System.out.println("as the victor!\"");
+        System.out.println();
         System.out.println("Demonminator squares up");
 
         //while both characters have hp
@@ -328,6 +341,13 @@ public class Lightswitch {
         }
         else if(rabbitHitPoints <=0){
             System.out.println();
+            System.out.println("\"You dare approach me, and have the audacity to defeat me? Impossible.\"");
+            System.out.println("Demonminator's beady eyes continue staring lasers at you, unblinking. You reason ");
+            System.out.println("that there (surely) must be a reward for defeating him...");
+            System.out.println("\"Hmph. Here's your reward.\"");
+            System.out.println("Demonminator shoves an egg at your face, which you thankfully caught in time");
+            System.out.println("\"Now get out of my sight, peasant. Do not disturb me ever again\"");
+
             System.out.println("Demonminator fainted");
             System.out.println("You won!");
             System.out.println("You obtained an egg");
@@ -335,8 +355,13 @@ public class Lightswitch {
         }
         else{
             System.out.println();
+            System.out.println("The battle was too much... You begin to lose consciousness after his last attack.");
+            System.out.println("\"Well well, we all know who the victor is, even before this battle. Another win ");
+            System.out.println("for the books, of course.\"");
+            System.out.println("Demonimator sneers at you and flashes his prideful smile.");
             System.out.println("You blacked out");
             System.out.println("GAME OVER");
+            System.out.println("You awake back in the Dining Room.");
         }
         System.out.println();
     }

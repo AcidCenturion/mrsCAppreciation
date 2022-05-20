@@ -174,25 +174,22 @@ public class Player {
             //call interactables method from the Backyard scene
             else if(location.equals("Backyard")){
 
-                boolean tempEgg3 = true;
                 boolean tempEgg4 = true;
                 boolean tempContact = true;
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = bckyrd.interactables(tempContact, tempEgg3, tempEgg4);
+                location = bckyrd.interactables(tempContact, eggQuest3.egg, tempEgg4);
             }
 
             //call interactables method from the Dining Room scene
             else if(location.equals("Dining Room")){
 
                 boolean tempEgg1 = true;
-                boolean tempEgg2 = true;
-                boolean tempContact = true;
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = dineRoom.interactables(tempContact, tempEgg1, tempEgg2);
+                location = dineRoom.interactables(bckyrd.chickenInteraction, tempEgg1, eggQuest2.egg);
             }
 
             //call the game from the Lightswitch scene
