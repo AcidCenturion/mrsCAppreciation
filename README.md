@@ -6,7 +6,7 @@ From, the 2021-2022 APCS Class
     Rahil Prakash,
     Edward Lau,
     Johnathan Sutan,
-    Bradon Lee,
+    Brandon Lee,
     Hannah Li,
     Henry Lai,
     Raymond Mok,
