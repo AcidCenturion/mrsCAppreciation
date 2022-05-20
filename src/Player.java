@@ -18,6 +18,7 @@ public class Player {
     UnlockedBasement unlockPass = new UnlockedBasement();
     Backyard bckyrd = new Backyard();
     DiningRoom dineRoom = new DiningRoom();
+    Garden eggQuest1 = new Garden();
     FenceGate eggQuest2 = new FenceGate();
     Lightswitch eggQuest3 = new Lightswitch();
     TimeUnit timer = TimeUnit.SECONDS;
@@ -161,35 +162,30 @@ public class Player {
             //call interactables method from the Unlocked Basement scene
             else if(location.equals("Unlocked Passage")){
 
-                boolean tempEgg1 = true;
-                boolean tempEgg2 = true;
-                boolean tempEgg3 = true;
                 boolean tempEgg4 = true;
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = unlockPass.interactables(bedStand.flashlight, tempEgg1, tempEgg2, tempEgg3, tempEgg4);
+                location = unlockPass.interactables(bedStand.flashlight, eggQuest1.egg, eggQuest2.egg, eggQuest3.egg,
+                        tempEgg4);
             }
 
             //call interactables method from the Backyard scene
             else if(location.equals("Backyard")){
 
                 boolean tempEgg4 = true;
-                boolean tempContact = true;
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = bckyrd.interactables(tempContact, eggQuest3.egg, tempEgg4);
+                location = bckyrd.interactables(dineRoom.rabbitInteraction, eggQuest3.egg, tempEgg4);
             }
 
             //call interactables method from the Dining Room scene
             else if(location.equals("Dining Room")){
 
-                boolean tempEgg1 = true;
-
                 //call the interactables method
                 //redefine the location using the method return
-                location = dineRoom.interactables(bckyrd.chickenInteraction, tempEgg1, eggQuest2.egg);
+                location = dineRoom.interactables(bckyrd.chickenInteraction, eggQuest1.egg, eggQuest2.egg);
             }
 
             //call the game from the Lightswitch scene
@@ -207,6 +203,16 @@ public class Player {
 
                 //call the game
                 eggQuest2.TTT();
+
+                //reset location
+                location = "Backyard";
+            }
+
+            //call the game from the Garden scene
+            else if(location.equals("Garden")){
+
+                //call the game
+                eggQuest1.eggQuest();
 
                 //reset location
                 location = "Backyard";
