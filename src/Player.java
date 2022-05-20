@@ -21,6 +21,7 @@ public class Player {
     Garden eggQuest1 = new Garden();
     FenceGate eggQuest2 = new FenceGate();
     Lightswitch eggQuest3 = new Lightswitch();
+    RabbitCage eggQuest4 = new RabbitCage();
     TimeUnit timer = TimeUnit.SECONDS;
 
     //Store where the player is located. Default value at the starting location
@@ -132,7 +133,7 @@ public class Player {
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = bedWardrobe.interactables(utilBoxes.key);
+                location = bedWardrobe.interactables(utilBoxes.getKey());
             }
 
             //call interactables from the Living Room
@@ -140,7 +141,7 @@ public class Player {
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = livRoom.interactables(bedWardrobe.passageUnlocked);
+                location = livRoom.interactables(bedWardrobe.getPassageUnlocked());
             }
 
             //call interactables from the Utilities Room
@@ -166,18 +167,16 @@ public class Player {
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = unlockPass.interactables(bedStand.flashlight, eggQuest1.egg, eggQuest2.egg, eggQuest3.egg,
-                        tempEgg4);
+                location = unlockPass.interactables(bedStand.getFlashlight(), eggQuest1.getEgg(), eggQuest2.getEgg(),
+                        eggQuest3.getEgg(), eggQuest4.getEgg());
             }
 
             //call interactables method from the Backyard scene
             else if(location.equals("Backyard")){
 
-                boolean tempEgg4 = true;
-
                 //call the interactables method
                 //redefine the location using the method return
-                location = bckyrd.interactables(dineRoom.rabbitInteraction, eggQuest3.egg, tempEgg4);
+                location = bckyrd.interactables(dineRoom.rabbitInteraction, eggQuest3.getEgg(), eggQuest4.getEgg());
             }
 
             //call interactables method from the Dining Room scene
@@ -185,7 +184,7 @@ public class Player {
 
                 //call the interactables method
                 //redefine the location using the method return
-                location = dineRoom.interactables(bckyrd.chickenInteraction, eggQuest1.egg, eggQuest2.egg);
+                location = dineRoom.interactables(bckyrd.chickenInteraction, eggQuest1.getEgg(), eggQuest2.getEgg());
             }
 
             //call the game from the Lightswitch scene
@@ -216,6 +215,15 @@ public class Player {
 
                 //reset location
                 location = "Backyard";
+            }
+
+            //call the game from the RabbitCage
+            else if(location.equals("Rabbit Cage")){
+
+                //call the game
+
+                //reset location
+                location = "Dining Room";
             }
         }
     }

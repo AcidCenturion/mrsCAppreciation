@@ -7,7 +7,12 @@ public class Nightstand {
      */
 
     //Boolean variables that store if the player has obtained the item
-    boolean flashlight = false;
+    private boolean flashlight = false;
+
+    //get the flashlight
+    public boolean getFlashlight(){
+        return flashlight;
+    }
 
     /* Create method to print details about all the interactables in a scene.
      * If the player moves location, return the new location as a string

@@ -7,7 +7,12 @@ public class Boxes {
      */
 
     //Boolean variables that store if the player has obtained the item
-    boolean key = false;
+    private boolean key = false;
+
+    //get key value
+    public boolean getKey(){
+        return key;
+    }
 
     /* Create method to print details about all the interactables in a scene.
      * If the player moves location, return the new location as a string

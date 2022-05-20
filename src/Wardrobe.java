@@ -7,7 +7,12 @@ public class Wardrobe {
      */
 
     //Track if the passage is unlocked
-    boolean passageUnlocked = false;
+    private boolean passageUnlocked = false;
+
+    //get passage unlock detials
+    public boolean getPassageUnlocked(){
+        return passageUnlocked;
+    }
 
     /* Create method to print details about all the interactables in a scene.
      * If the player moves location, return the new location as a string

@@ -4,7 +4,7 @@ public class FenceGate {
     /* Chuck's Egg Quest 2 : TicTacToe*/
 
     //field
-    boolean egg = false;
+    private boolean egg = false;
 
     private Scanner input = new Scanner(System.in);
     private int botCol = 4;
@@ -26,6 +26,11 @@ public class FenceGate {
 
 
     private String [][] board = new String[3][3];
+
+    //getter
+    public boolean getEgg(){
+        return egg;
+    }
 
     //other methods
     int askRow(){

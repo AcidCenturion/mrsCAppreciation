@@ -2,7 +2,12 @@ import java.util.Scanner;
 
 public class Garden {
     /* Zoplex's Egg Quest 1 : Quiz*/
-    boolean egg = false;
+    private boolean egg = false;
+
+    //get the egg
+    public boolean getEgg(){
+        return egg;
+    }
 
     /* Create method to run the quiz
      * no return, edit egg value

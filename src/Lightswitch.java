@@ -4,7 +4,7 @@ public class Lightswitch {
     /* Demonminator's Egg Quest 3: Combat */
 
     //fields
-    boolean egg = false;
+    private boolean egg = false;
     private int playerHitPoints;
     private int rabbitHitPoints;
     private int playerMana;
@@ -15,6 +15,11 @@ public class Lightswitch {
     private boolean enemyLockedOn;
     Scanner myScan = new Scanner(System.in);
     String userInput;
+
+    //get the egg bool
+    public boolean getEgg(){
+        return egg;
+    }
 
     /* Method for accuracy
      * return boolean value
