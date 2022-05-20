@@ -330,6 +330,8 @@ public class FenceGate {
                 System.out.println("\nTie Game.");
                 printGameboard(getBoard());
 
+                System.out.println();
+
                 break;
             }
 
@@ -338,6 +340,8 @@ public class FenceGate {
             if((gameStatus(getBoard())).equals("win")){
                 System.out.println("\nChuck wins.");
                 printGameboard(getBoard());
+
+                System.out.println();
 
                 break;
             }

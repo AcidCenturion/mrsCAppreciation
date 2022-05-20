@@ -115,6 +115,7 @@ public class Garden {
         System.out.println("stayst true to minest word and bestow upon thee: an egg. Do withdst it as thou pleaseth.\"");
         System.out.println();
         System.out.println("You obtained an egg");
+        System.out.println();
         egg = true;
     }
 }
