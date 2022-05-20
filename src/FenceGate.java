@@ -45,10 +45,10 @@ public class FenceGate {
     }
 
 
-    String[] askMoves(String playerName){
+    String[] askMoves(){
         playerMoves[0] = "X";
         while(playerCount == 0) {
-            System.out.println(playerName + ", enter a number from 1-3 for row");
+            System.out.println("Enter a number from 1-3 for row");
             //subtract 1 to make sure index is correct in the nested array for gameboard
             playerRow = input1.nextInt() - 1;
             if((playerRow < 0) || (playerRow > 3)){
@@ -131,120 +131,120 @@ public class FenceGate {
     String[] botMoves(){  //only to block player
         String[]botMoves = {"O","2","2"};
 
-        if(board[0][0].equals(board[0][1])&&board[0][2].equals(".")){  //first row  #3 empty
+        if(board[0][0].equals(board[0][1])&&board[0][2].equals(".")&&!board[0][0].equals(".")){  //first row  #3 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
-        }else if(board[0][0].equals(board[0][2])&&board[0][1].equals(".")){  //first row  #2 empty
+        }else if(board[0][0].equals(board[0][2])&&board[0][1].equals(".")&&!board[0][0].equals(".")){  //first row  #2 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(1);
             return botMoves;  //set board[0][1] to O
-        }else if(board[0][1].equals(board[0][2])&&board[0][0].equals(".")){  //first row  #1 empty
+        }else if(board[0][1].equals(board[0][2])&&board[0][0].equals(".")&&!board[0][1].equals(".")){  //first row  #1 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(0);
             return botMoves;  //set board[0][0] to O
 
 
 
-        }else if(board[1][0].equals(board[1][1])&&board[1][2].equals(".")){  //second row  #3 empty
+        }else if(board[1][0].equals(board[1][1])&&board[1][2].equals(".")&&!board[1][0].equals(".")){  //second row  #3 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
-        }else if(board[1][0].equals(board[1][2])&&board[1][1].equals(".")){  //second row  #2 empty
+        }else if(board[1][0].equals(board[1][2])&&board[1][1].equals(".")&&!board[1][0].equals(".")){  //second row  #2 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(1);
             return botMoves;  //set board[0][2] to O
-        }else if(board[1][1].equals(board[1][2])&&board[1][0].equals(".")){  //second row  #1 empty
+        }else if(board[1][1].equals(board[1][2])&&board[1][0].equals(".")&&!board[1][1].equals(".")){  //second row  #1 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(0);
             return botMoves;  //set board[0][2] to O
         }
 
 
-        else if(board[2][0].equals(board[2][1])&&board[2][2].equals(".")){  //third row  #3 empty
+        else if(board[2][0].equals(board[2][1])&&board[2][2].equals(".")&&!board[2][0].equals(".")){  //third row  #3 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
-        }else if(board[2][0].equals(board[2][2])&&board[2][1].equals(".")){  //third row  #2 empty
+        }else if(board[2][0].equals(board[2][2])&&board[2][1].equals(".")&&!board[2][0].equals(".")){  //third row  #2 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(1);
             return botMoves;  //set board[0][2] to O
-        }else if(board[2][1].equals(board[2][2])&&board[2][0].equals(".")){  //third row  #1 empty
+        }else if(board[2][1].equals(board[2][2])&&board[2][0].equals(".")&&!board[2][1].equals(".")){  //third row  #1 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(0);
             return botMoves;  //set board[0][2] to O
         }
 
 
-        else if(board[0][0].equals(board[1][0])&&board[2][0].equals(".")){  //first col  #3 empty
+        else if(board[0][0].equals(board[1][0])&&board[2][0].equals(".")&&!board[0][0].equals(".")){  //first col  #3 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(0);
             return botMoves;  //set board[0][2] to O
-        }else if(board[0][0].equals(board[2][0])&&board[1][0].equals(".")){  //first col  #2 empty
+        }else if(board[0][0].equals(board[2][0])&&board[1][0].equals(".")&&!board[0][0].equals(".")){  //first col  #2 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(0);
             return botMoves;  //set board[0][2] to O
-        }else if(board[1][0].equals(board[2][0])&&board[0][0].equals(".")){  //first col  #1 empty
+        }else if(board[1][0].equals(board[2][0])&&board[0][0].equals(".")&&!board[1][0].equals(".")){  //first col  #1 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(0);
             return botMoves;  //set board[0][2] to O
         }
 
 
-        else if(board[0][1].equals(board[1][1])&&board[2][1].equals(".")){  //second col  #3 empty
+        else if(board[0][1].equals(board[1][1])&&board[2][1].equals(".")&&!board[0][1].equals(".")){  //second col  #3 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(1);
             return botMoves;  //set board[0][2] to O
-        }else if(board[0][1].equals(board[2][1])&&board[1][1].equals(".")){  //second col  #2 empty
+        }else if(board[0][1].equals(board[2][1])&&board[1][1].equals(".")&&!board[0][1].equals(".")){  //second col  #2 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(1);
             return botMoves;  //set board[0][2] to O
-        }else if(board[1][1].equals(board[2][1])&&board[0][1].equals(".")){  //second col  #1 empty
+        }else if(board[1][1].equals(board[2][1])&&board[0][1].equals(".")&&!board[1][1].equals(".")){  //second col  #1 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(1);
             return botMoves;  //set board[0][2] to O
         }
 
 
-        else if(board[0][2].equals(board[1][2])&&board[2][2].equals(".")){  //third col  #3 empty
+        else if(board[0][2].equals(board[1][2])&&board[2][2].equals(".")&&!board[0][2].equals(".")){  //third col  #3 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
-        }else if(board[0][2].equals(board[2][2])&&board[1][2].equals(".")){  //third col  #2 empty
+        }else if(board[0][2].equals(board[2][2])&&board[1][2].equals(".")&&!board[0][2].equals(".")){  //third col  #2 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
-        }else if(board[1][2].equals(board[2][2])&&board[0][2].equals(".")){  //third col  #1 empty
+        }else if(board[1][2].equals(board[2][2])&&board[0][2].equals(".")&&!board[1][2].equals(".")){  //third col  #1 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
         }
 
 
-        else if(board[0][0].equals(board[1][1])&&board[2][2].equals(".")){  //left right diagonal  #3 empty
+        else if(board[0][0].equals(board[1][1])&&board[2][2].equals(".")&&!board[0][0].equals(".")){  //left top right down diagonal  #3 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(2);
-            return botMoves;  //set board[0][2] to O
-        }else if(board[0][0].equals(board[2][2])&&board[1][1].equals(".")){  //left right diagonal  #2 empty
+            return botMoves;  //set board[2][2] to O
+        }else if(board[0][0].equals(board[2][2])&&board[1][1].equals(".")&&!board[0][0].equals(".")){  //left top right down diagonal  #2 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(1);
-            return botMoves;  //set board[0][2] to O
-        }else if(board[1][1].equals(board[2][2])&&board[0][0].equals(".")){  //left right diagonal  #1 empty
+            return botMoves;  //set board[1][1] to O
+        }else if(board[1][1].equals(board[2][2])&&board[0][0].equals(".")&&!board[1][1].equals(".")){  //left top right down diagonal  #1 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(0);
-            return botMoves;  //set board[0][2] to O
+            return botMoves;  //set board[0][0] to O
         }
 
 
-        else if(board[0][2].equals(board[1][1])&&board[2][0].equals(".")){  //right left diagonal  #3 empty
+        else if(board[0][2].equals(board[1][1])&&board[2][0].equals(".")&&!board[0][2].equals(".")){  //right left up down diagonal  #3 empty
             botMoves[1]=Integer.toString(2);
             botMoves[2]=Integer.toString(0);
-            return botMoves;  //set board[0][2] to O
-        }else if(board[0][2].equals(board[2][0])&&board[1][1].equals(".")){  //right left diagonal  #2 empty
+            return botMoves;  //set board[2][0] to O
+        }else if(board[0][2].equals(board[2][0])&&board[1][1].equals(".")&&!board[0][2].equals(".")){  //right left up down diagonal  #2 empty
             botMoves[1]=Integer.toString(1);
             botMoves[2]=Integer.toString(1);
-            return botMoves;  //set board[0][2] to O
-        }else if(board[2][0].equals(board[1][1])&&board[0][2].equals(".")){  //right left diagonal  #1 empty
+            return botMoves;  //set board[1][1] to O
+        }else if(board[2][0].equals(board[1][1])&&board[0][2].equals(".")&&!board[2][0].equals(".")){  //right left up down diagonal  #1 empty
             botMoves[1]=Integer.toString(0);
             botMoves[2]=Integer.toString(2);
             return botMoves;  //set board[0][2] to O
@@ -273,8 +273,6 @@ public class FenceGate {
         else{
             board[Integer.parseInt(moves[1])][Integer.parseInt(moves[2])] = moves[0]; //if board coordinates are not taken, assign corresponding symbol to board
         }
-
-
     }
 
 
@@ -293,16 +291,26 @@ public class FenceGate {
         spaceCount = 0;
         board = new String[3][3];
 
-        //introduce the game with bun bun
-        System.out.println("game details");
-
+        //introduce the game with chuck
+        System.out.println("You hear loud banging noises over at the fence gate, curious about the commotion over ");
+        System.out.println("there. As you get closer, the sound gets louder, and you see that there's a chicken ");
+        System.out.println("banging its head on the fence gate. How strange, chickens don't usually bang their ");
+        System.out.println("heads on things. The chicken stopped banging its head as you get closer to it.");
+        System.out.println("\"Hey, excuse me, I'm Chuck, can you help me open this fence gate?\"");
+        System.out.println("You ask why it's banging its head on gate when there's a door latch");
+        System.out.println("\"ARE YOU MOCKING MY INTELLIGENCE??? I’LL SHOW YOU MY INTELLECT IN A REAL IQ GAME: ");
+        System.out.println("TIC TAC TOE.\"");
+        System.out.println("I didn't even say anything accusatory");
+        System.out.println("\"I even have this egg that I'll offer as a bet. Because I'm so confident in my ");
+        System.out.println("intelligence.\"");
+        System.out.println("Evidently, Chuck really should be much less confident.");
 
         printGameboard(makeGameboard());
 
         //loop until win or tie occurs
         System.out.println("You are \"X\"");
         for(int i = 1; i <= 10; i++) {
-            addToBoard(askMoves("Player 1"));
+            addToBoard(askMoves());
             //game.printGameboard(game.getBoard());
             if((gameStatus(getBoard())).equals("win")){
                 System.out.println("\nYou win.");
