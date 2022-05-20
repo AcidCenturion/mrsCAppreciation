@@ -37,14 +37,14 @@ public class Garden {
         System.out.println();
 
         //check for correct answer
-        if(!(userInput.equals("No")||userInput.equals("no")||userInput.equals("1"))){
+        if(!(userInput.equalsIgnoreCase("no")||userInput.equals("2"))){
 
             //inform user they were incorrect
             System.out.println("\"haHA!! I knewst such a lowly lifeform as thyself couldst not possibly passetheth ");
             System.out.println("the heights of intelligence such as I! But feareth not, for I amst most gracious, ");
             System.out.println("and shallth gievth thou as many chances as thou wishest to proveth thine ");
             System.out.println("inferiority to I.\"");
-            System.out.println("Test failed. Returning to Backyard");
+            System.out.println("Test failed. Returning to Backyard.");
             System.out.println();
 
             //if they gave the wrong answer
@@ -58,7 +58,7 @@ public class Garden {
         System.out.println();
 
         //check for correct answer
-        if(!(userInput.equals("Very Important")||userInput.equals("very important")||userInput.equals("3"))){
+        if(!(userInput.equalsIgnoreCase("not important")||userInput.equals("1"))){
 
             //inform user they were incorrect
             System.out.println("\"haHA!! I knewst such a lowly lifeform as thyself couldst not possibly passetheth ");
@@ -79,7 +79,7 @@ public class Garden {
         System.out.println();
 
         //check for correct answer
-        if(!(userInput.equals("Bad")||userInput.equals("bad")||userInput.equals("2"))){
+        if(!(userInput.equalsIgnoreCase("bad")||userInput.equals("2"))){
 
             //inform user they were incorrect
             System.out.println("\"haHA!! I knewst such a lowly lifeform as thyself couldst not possibly passetheth ");
@@ -100,7 +100,7 @@ public class Garden {
         System.out.println();
 
         //check for correct answer
-        if(!(userInput.equals("Timeout")||userInput.equals("timeout")||userInput.equals("3"))){
+        if(!(userInput.equalsIgnoreCase("timeout")||userInput.equals("3"))){
 
             //inform user they were incorrect
             System.out.println("\"haHA!! I knewst such a lowly lifeform as thyself couldst not possibly passetheth ");
