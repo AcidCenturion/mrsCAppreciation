@@ -97,7 +97,7 @@ public class UnlockedBasement {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();

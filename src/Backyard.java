@@ -28,17 +28,17 @@ public class Backyard {
             firstEntry = false;
 
             //Print the first entry dialogue
-            System.out.println("I walk into the backyard and approach the coop. Fresh eggs make for the best ");
+            System.out.println("I walk into the Backyard and approach the coop. Fresh eggs make for the best ");
             System.out.println("breakfast. I hear the familiar clucking as I approach. It could be my imagination, ");
             System.out.println("but I feel like I hear something else along with the clucking… like English words ");
-            System.out.println("or some other intellectual communication. When I arrive, a chicken walks right up ");
+            System.out.println("or some other intellectual communication. When I arrive, a chicken walked right up ");
             System.out.println("to the door of the coop, with a navy-blue army general cap. Who gave this chicken ");
-            System.out.println("a military status??");
-            System.out.println("\"You! Where’s your salute?! I am Capt Cluck of the Chicken militia’s 1st platoon!\"");
-            System.out.println("The chicken… talked. I'm going insane. THE CHICKEN. CAN TALK. On second thought, ");
-            System.out.println("I didn’t need the eggs. I turn to start walking back to the house.");
-            System.out.println("\"Woah wait wait wait where do you think you’re heading? I havn’t even given you ");
-            System.out.println("orders yet. The Chicken militia needs help, and specifically help from the capable ");
+            System.out.println("a military status!?");
+            System.out.println("\"You! Where’s your salute? I am Capt Cluck of the Chicken militia’s 1st platoon!\"");
+            System.out.println("The chicken...talked. I'm going insane. THE CHICKEN. CAN TALK. On second thought, ");
+            System.out.println("I don’t need the eggs. I turn to start walking back to the house.");
+            System.out.println("\"Woah, wait wait wait where do you think you’re heading? I haven’t even given you ");
+            System.out.println("orders yet. The Chicken militia needs help; specifically help from the capable ");
             System.out.println("hands of a human.\"");
             System.out.println();
         }
@@ -52,11 +52,11 @@ public class Backyard {
             //Detail the room. This String is printed every time the user enters the room
             System.out.println("\"Them stupid rabbits that you house in the Dining Room be taking all our eggs! ");
             System.out.println("And we want them back. I know of two targets that have our eggs. Bun Bun is a ");
-            System.out.println("recluse. She’s probably still in the rabbit cage. But shes ditsy too. It ");
+            System.out.println("recluse. She’s probably still in the rabbit cage. But shes ditzy too. It ");
             System.out.println("shouldn’t be too hard to get the egg from her. Demonminator, on the other hand, ");
-            System.out.println("is a little more difficult. He likes fighting. He’s a little on the narcissistic ");
-            System.out.println("side, likes to be in control. He likes the light switch so that he gets to choose ");
-            System.out.println("when the lights are on and off. You can find him there\"");
+            System.out.println("is a bit more difficult. He likes fighting. He’s a little on the narcissistic ");
+            System.out.println("side, and likes to be in control. He likes the Light Switch so that he gets to choose ");
+            System.out.println("when the lights are on and off. You can find him there.\"");
             System.out.println("The chicken coop appears to be empty apart from Capt Cluck. It seems that if I ");
             System.out.println("want to have eggs for breakfast, I’ll just have to go along with it.");
             System.out.println();
@@ -70,12 +70,12 @@ public class Backyard {
             //inform user
             System.out.println("\"Them stupid rabbits that you house in the Dining Room be taking all our eggs! ");
             System.out.println("And we want them back. I know of two targets that have our eggs. Bun Bun is a ");
-            System.out.println("recluse. She’s probably still in the rabbit cage. But shes ditsy too. It ");
+            System.out.println("recluse. She’s probably still in the rabbit cage. But shes ditzy too. It ");
             System.out.println("shouldn’t be too hard to get the egg from her. Demonminator, on the other hand, ");
             System.out.println("is a little more difficult. He likes fighting. He’s a little on the narcissistic ");
             System.out.println("side, likes to be in control. He likes the light switch so that he gets to choose ");
-            System.out.println("when the lights are on and off. You can find him there\"");
-            System.out.println("The chicken coop appears to be empty apart from Capt Cluck. It seems that if I ");
+            System.out.println("when the lights are on and off. You can find him there.\"");
+            System.out.println("\nThe chicken coop appears to be empty apart from Capt Cluck. It seems that if I ");
             System.out.println("want to have eggs for breakfast, I’ll just have to go along with it.");
             System.out.println();
             System.out.println("What would you like to observe?");
@@ -110,8 +110,8 @@ public class Backyard {
             else if(userInput.equals("Chicken Coop")){
 
                 //detail chicken coop
-                System.out.println("Just an average chicken coop... an average chicken coop that now apparently ");
-                System.out.println("acts as the bast of operations for a chicken militia.");
+                System.out.println("Just an average chicken coop...an average chicken coop that now apparently ");
+                System.out.println("acts as the base of operations for a chicken militia.");
                 System.out.println();
 
                 //offer different options based on if the rabbits gave instructions
@@ -151,7 +151,7 @@ public class Backyard {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();

@@ -9,6 +9,6 @@ public class Runner {
         playGame.game();
 
         //test code
-        System.out.println("End of Game");
+        System.out.println("Game ended.");
     }
 }

@@ -55,7 +55,7 @@ public class FenceGate {
     String[] askMoves(){
         playerMoves[0] = "X";
         while(playerCount == 0) {
-            System.out.println("Enter a number from 1-3 for row");
+            System.out.println("Enter a number from 1-3 for row:");
             //subtract 1 to make sure index is correct in the nested array for gameboard
             playerRow = input1.nextInt() - 1;
             if((playerRow < 0) || (playerRow > 3)){
@@ -66,7 +66,7 @@ public class FenceGate {
             }
         }
         while(playerCount == 0) {
-            System.out.println("Enter a number from 1-3 for column");
+            System.out.println("Enter a number from 1-3 for column:");
             //subtract 1 for index
             playerCol = input2.nextInt() - 1;
             if((playerCol < 0) || (playerCol > 3)){

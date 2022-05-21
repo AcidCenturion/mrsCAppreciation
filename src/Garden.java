@@ -44,7 +44,7 @@ public class Garden {
             System.out.println("the heights of intelligence such as I! But feareth not, for I amst most gracious, ");
             System.out.println("and shallth gievth thou as many chances as thou wishest to proveth thine ");
             System.out.println("inferiority to I.\"");
-            System.out.println("Test failed. Returning to Backyard.");
+            System.out.println("Test failed. Returning to Backyard...");
             System.out.println();
 
             //if they gave the wrong answer
@@ -65,7 +65,7 @@ public class Garden {
             System.out.println("the heights of intelligence such as I! But feareth not, for I amst most gracious, ");
             System.out.println("and shallth gievth thou as many chances as thou wishest to proveth thine ");
             System.out.println("inferiority to I.\"");
-            System.out.println("Test failed. Returning to Backyard");
+            System.out.println("Test failed. Returning to Backyard...");
             System.out.println();
 
             //if they gave the wrong answer
@@ -86,7 +86,7 @@ public class Garden {
             System.out.println("the heights of intelligence such as I! But feareth not, for I amst most gracious, ");
             System.out.println("and shallth gievth thou as many chances as thou wishest to proveth thine ");
             System.out.println("inferiority to I.\"");
-            System.out.println("Test failed. Returning to Backyard");
+            System.out.println("Test failed. Returning to Backyard...");
             System.out.println();
 
             //if they gave the wrong answer
@@ -107,7 +107,7 @@ public class Garden {
             System.out.println("the heights of intelligence such as I! But feareth not, for I amst most gracious, ");
             System.out.println("and shallth gievth thou as many chances as thou wishest to proveth thine ");
             System.out.println("inferiority to I.\"");
-            System.out.println("Test failed. Returning to Backyard");
+            System.out.println("Test failed. Returning to Backyard...");
             System.out.println();
 
             //if they gave the wrong answer
@@ -119,7 +119,7 @@ public class Garden {
         System.out.println("the answers perhapseth? Or hast thou peeketh at minest code?! Welleth then… i shallth ");
         System.out.println("stayst true to minest word and bestow upon thee: an egg. Do withdst it as thou pleaseth.\"");
         System.out.println();
-        System.out.println("You obtained an egg");
+        System.out.println("You obtained an egg.");
         System.out.println();
         System.out.println("\033[3m... Do not bite the hand that feeds you, chicken.\033[0m");
         System.out.println();

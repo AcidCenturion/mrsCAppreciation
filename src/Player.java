@@ -93,7 +93,7 @@ public class Player {
                         //print z
                         System.out.println("zzzz");
                     }
-                    System.out.println("four lines of z's... its kinda sexy....");
+                    System.out.println("four lines of z's...it's kinda sexy...");
                 }
 
                 //end game
@@ -234,21 +234,21 @@ public class Player {
             System.out.println("I look around my surroundings. The room looks like a school classroom, but the ");
             System.out.println("desks are arranged all in the center, like one large dining table. The table is ");
             System.out.println("loaded with food on top. There are eggs made with all kinds of methods, like ");
-            System.out.println("hardboiled eggs, sunny-side-up eggs, scrambled eggs, omelets, etc. Seated at the ");
-            System.out.println("table are… \033[3mmy APCS students???\033[0m");
+            System.out.println("hard boiled eggs, sunny-side-up eggs, scrambled eggs, omelets, etc. Seated at the ");
+            System.out.println("table are...\033[3mmy APCS students???\033[0m");
             System.out.println("\"What are you all doing in here?\"");
             System.out.println("\"Oh, good morning Mrs. Carlson\"");
             System.out.println("Michael must not have gotten enough sleep again.");
-            System.out.println("\"It’s the afternoon,\" Jonathan corrected");
-            System.out.println("\"Haiya go to bed on time\" Edward chimed in. Rahil chuckles and joins in");
+            System.out.println("\"It’s the afternoon,\" Jonathan corrected.");
+            System.out.println("\"Haiya go to bed on time,\" Edward chimed in. Rahil chuckles and joins in.");
             System.out.println("\"Well, anyways, thanks Mrs. Carlson for teaching us computer science. We wanted ");
             System.out.println("to thank you by displaying what we learned in this computer science project we ");
-            System.out.println("worked on together\"");
+            System.out.println("worked on together.\"");
             System.out.println("The students invite me to sit down and join them in their feast of eggs. Ahhh... ");
             System.out.println("finally, the meal I've been waiting for. I ignore the fact that my basement is ");
             System.out.println("apparently the APCS classroom, and that the students have been in my basement for ");
             System.out.println("who knows how long. I'm glad I made the decision to wake up instead of going back to ");
-            System.out.println("sleep after that nightmare. Its a good thing I'm much better at keeping a good sleep ");
+            System.out.println("sleep after that nightmare. It's a good thing I'm much better at keeping a good sleep ");
             System.out.println("schedule than Michael is.");
         }
 
@@ -258,9 +258,9 @@ public class Player {
             System.out.println("the front, and a platoon of chickens in formation stand behind him. Capt Cluck ");
             System.out.println("gives you a nod, and you hand back the eggs that the rabbits stole.");
             System.out.println("\"Thank you, soldier. Without your help, we may have found ourselves at war with ");
-            System.out.println("the rabbits for quite some time\"");
+            System.out.println("the rabbits for quite some time.\"");
             System.out.println("This chickens show you much gratitude, and even hold a ceremony in giving me the ");
-            System.out.println("chicken award of honor. As Capt Cluck congratulates and thanks me for returning ");
+            System.out.println("Chicken Award of Honor. As Capt Cluck congratulates and thanks me for returning ");
             System.out.println("the eggs, I feel a wave of dissatisfaction. I remember that my original plans ");
             System.out.println("today was to get some eggs for a snack. But now, I’ve just turned in those eggs ");
             System.out.println("back to the chickens. I start imagining a table spread with all kinds of eggs, ");
@@ -272,18 +272,18 @@ public class Player {
         else{
             System.out.println("After I retrieve the 2 prized chicken eggs, I return to the living room. Rabbits. ");
             System.out.println("Rabbits are everywhere. But they're neatly lined up around the room, wearing ");
-            System.out.println("leather vests and belts with an array of tools");
-            System.out.println("\"Hoptastic work Mrs. C! I knew we could count on you- only a human of your exact ");
+            System.out.println("leather vests and belts with an array of tools.");
+            System.out.println("\"Hoptastic work, Mrs. C! I knew we could count on you- only a human of your exact ");
             System.out.println("specifications could have done this! You should be proud of yourself! Rabbits of ");
-            System.out.println("liberty, hope, and easter soon-to-be, be proud too for we have triumphed in our ");
+            System.out.println("liberty, hope, and Easter soon-to-be, be proud too for we have triumphed in our ");
             System.out.println("endeavor to attain the highly marketable chicken egg!!\"");
             System.out.println("Normally, I would have silenced such an intruder, but talking rabbits and their ");
             System.out.println("artistic missions are a bit out of the ordinary. While Czar Hops continues to talk ");
             System.out.println("about hopes and dreams for the easter rabbits, I peruse the room- which for some ");
             System.out.println("strange reason, changes into the setting of a CCA classroom.");
             System.out.println("\033[3mIt's almost as if I went to an alternate universe. But why?\033[0m");
-            System.out.println("It seems like they're throwing a party for me here. With Chicken eggs. It's ");
-            System.out.println("absolutely the most amazing surprise I have been to. The hors' de touvere and eggs ");
+            System.out.println("It seems like they're throwing a party for me here. With chicken eggs. It's ");
+            System.out.println("absolutely the most amazing surprise I have been to. The hors d'oeuvres and eggs ");
             System.out.println("benedict are all absolutely awesome.");
         }
     }

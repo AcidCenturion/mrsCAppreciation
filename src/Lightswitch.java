@@ -56,7 +56,7 @@ public class Lightswitch {
                 || (userInput.equals("Attack Boost")&&playerMana>=10))){
 
             if(playerMana < 10){
-                System.out.println("You're out of mana");
+                System.out.println("You're out of mana.");
             }
 
             if(userInput.equals("Info")){
@@ -69,7 +69,7 @@ public class Lightswitch {
             }
 
             //Inform the user to try again
-            System.out.println("Please input an option exactly as specified");
+            System.out.println("Please input an option exactly as specified.");
 
             //Scan again for new user input
             userInput = myScan.nextLine();
@@ -89,7 +89,7 @@ public class Lightswitch {
                     rabbitHitPoints -= 12;
                     playerCharge = false;
 
-                    System.out.println("You hit Demonminator for 12 damage");
+                    System.out.println("You hit Demonminator for 12 damage.");
                 }
 
                 //otherwise, reduce opponent hp by normal amount
@@ -97,7 +97,7 @@ public class Lightswitch {
                     //reduce opponent hp (normal amount)
                     rabbitHitPoints -= 5;
 
-                    System.out.println("You hit Demonminator for 5 damage");
+                    System.out.println("You hit Demonminator for 5 damage.");
                 }
             }
 
@@ -120,7 +120,7 @@ public class Lightswitch {
             //use 10 mana
             playerMana -= 10;
 
-            System.out.println("You brace for incoming damage");
+            System.out.println("You brace for incoming damage.");
         }
         else if(userInput.equals("Heal")){
 
@@ -130,7 +130,7 @@ public class Lightswitch {
             //use 10 mana
             playerMana -= 10;
 
-            System.out.println("You heal 7 HP");
+            System.out.println("You heal 7 HP.");
         }
         else{
 
@@ -140,7 +140,7 @@ public class Lightswitch {
             //use 10 mana
             playerMana -= 10;
 
-            System.out.println("You charge your next attack");
+            System.out.println("You charge your next attack.");
         }
     }
 
@@ -167,32 +167,32 @@ public class Lightswitch {
                     //enemy charged and player not defended
                     playerHitPoints -= 12;
 
-                    System.out.println("Demonminator readied a charged attack");
-                    System.out.println("Demonminator hits you for 12 damage");
+                    System.out.println("Demonminator readied a charged attack.");
+                    System.out.println("Demonminator hits you for 12 damage.");
                 }
                 else if(enemyCharge){
 
                     //enemy charged and player defended
                     playerHitPoints -=6;
 
-                    System.out.println("Demonminator readied a charged attack");
-                    System.out.println("You braced for the hit");
-                    System.out.println("Demonminator hits you for 6 damage");
+                    System.out.println("Demonminator readied a charged attack.");
+                    System.out.println("You braced for the hit.");
+                    System.out.println("Demonminator hits you for 6 damage.");
                 }
                 else if(playerDefend){
 
                     //player defended and enemy not charged
                     playerHitPoints -= 2;
 
-                    System.out.println("You braced for the hit");
-                    System.out.println("Demonminator hits you for 2 damage");
+                    System.out.println("You braced for the hit.");
+                    System.out.println("Demonminator hits you for 2 damage.");
                 }
                 else{
 
                     //normal damage
                     playerHitPoints -= 5;
 
-                    System.out.println("Demonminator hits you for 5 damage");
+                    System.out.println("Demonminator hits you for 5 damage.");
                 }
 
                 //reset buffs if any
@@ -200,7 +200,7 @@ public class Lightswitch {
                 enemyLockedOn = false;
                 if(playerDefenseTimer == 0 && playerDefend){
                     playerDefend = false;
-                    System.out.println("Your defense buff wears out");
+                    System.out.println("Your defense buff wears out...");
                 }
                 else{
                     playerDefenseTimer--;
@@ -225,29 +225,29 @@ public class Lightswitch {
                     //enemy charged and player not defended
                     playerHitPoints -= 25;
 
-                    System.out.println("Demonminator readied a charged attack");
-                    System.out.println("Demonminator hits you with a strong attack for 25 damage");
+                    System.out.println("Demonminator readied a charged attack.");
+                    System.out.println("Demonminator hits you with a strong attack for 25 damage.");
                 } else if (enemyCharge) {
 
                     //enemy charged and player defended
                     playerHitPoints -= 14;
 
-                    System.out.println("Demonminator readied a charged attack");
-                    System.out.println("You braced for the hit");
-                    System.out.println("Demonminator hits you with a strong attack for 14 damage");
+                    System.out.println("Demonminator readied a charged attack.");
+                    System.out.println("You braced for the hit.");
+                    System.out.println("Demonminator hits you with a strong attack for 14 damage.");
                 } else if (playerDefend) {
 
                     //player defended and enemy not charged
                     playerHitPoints -= 6;
 
                     System.out.println("You braced for the hit");
-                    System.out.println("Demonminator hits you with a strong attack for 6 damage");
+                    System.out.println("Demonminator hits you with a strong attack for 6 damage.");
                 } else {
 
                     //normal damage
                     playerHitPoints -= 10;
 
-                    System.out.println("Demonminator hits you with a strong attack for 10 damage");
+                    System.out.println("Demonminator hits you with a strong attack for 10 damage.");
                 }
 
                 //reset buffs if any
@@ -255,7 +255,7 @@ public class Lightswitch {
                 enemyLockedOn = false;
                 if(playerDefenseTimer == 0 && playerDefend){
                     playerDefend = false;
-                    System.out.println("Your defense buff wears out");
+                    System.out.println("Your defense buff wears out.");
                 }
                 else{
                     playerDefenseTimer--;
@@ -273,10 +273,10 @@ public class Lightswitch {
 
             //if he was already charged
             if(enemyCharge){
-                System.out.println("Demonminator stores his charge");
+                System.out.println("Demonminator stores his charge.");
             }
             else{
-                System.out.println("Demonminator charges energy for his next attack");
+                System.out.println("Demonminator charges energy for his next attack.");
             }
 
             //buff enemy's next attack
@@ -289,7 +289,7 @@ public class Lightswitch {
             //guarantee the next attack to land
             enemyLockedOn = true;
 
-            System.out.println("Demonminator locks onto your movements");
+            System.out.println("Demonminator locks onto your movements.");
         }
     }
 
@@ -325,7 +325,7 @@ public class Lightswitch {
         System.out.println("\"I shall accept your challenge. Brace yourself for defeat, for today I will emerge ");
         System.out.println("as the victor!\"");
         System.out.println();
-        System.out.println("Demonminator squares up");
+        System.out.println("Demonminator squares up.");
 
         //while both characters have hp
         while(playerHitPoints > 0 && rabbitHitPoints > 0){
@@ -340,9 +340,9 @@ public class Lightswitch {
 
             //ties because both characters take themselves out in the same round
             System.out.println();
-            System.out.println("Demonminator fainted");
-            System.out.println("You blacked out");
-            System.out.println("Game draw");
+            System.out.println("Demonminator fainted.");
+            System.out.println("You blacked out.");
+            System.out.println("Draw.");
         }
         else if(rabbitHitPoints <=0){
             System.out.println();
@@ -350,23 +350,23 @@ public class Lightswitch {
             System.out.println("Demonminator's beady eyes continue staring lasers at you, unblinking. You reason ");
             System.out.println("that there (surely) must be a reward for defeating him...");
             System.out.println("\"Hmph. Here's your reward.\"");
-            System.out.println("Demonminator shoves an egg at your face, which you thankfully caught in time");
-            System.out.println("\"Now get out of my sight, peasant. Do not disturb me ever again\"");
+            System.out.println("Demonminator shoves an egg at your face, which you thankfully caught in time.");
+            System.out.println("\"Now get out of my sight, peasant. Do not disturb me ever again.\"");
 
-            System.out.println("Demonminator fainted");
+            System.out.println("Demonminator fainted.");
             System.out.println("You won!");
-            System.out.println("You obtained an egg");
+            System.out.println("You obtained an egg.");
             egg = true;
         }
         else{
             System.out.println();
-            System.out.println("The battle was too much... You begin to lose consciousness after his last attack.");
+            System.out.println("The battle was too much...You begin to lose consciousness after his last attack.");
             System.out.println("\"Well well, we all know who the victor is, even before this battle. Another win ");
-            System.out.println("for the books, of course.\"");
+            System.out.println("for the books, of course. HAHAHA!\"");
             System.out.println("Demonimator sneers at you and flashes his prideful smile.");
-            System.out.println("You blacked out");
-            System.out.println("GAME OVER");
-            System.out.println("You awake back in the Dining Room.");
+            System.out.println("You blacked out.");
+            System.out.println("GAME OVER...");
+            System.out.println("You wake up in the Dining Room.");
         }
         System.out.println();
     }

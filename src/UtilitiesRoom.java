@@ -20,7 +20,7 @@ public class UtilitiesRoom {
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
-        System.out.println("I enter the Utilities room. Its just as messy as I remember it to be. Washing machine ");
+        System.out.println("I enter the utilities room. Its just as messy as I remember it to be. The washing machine ");
         System.out.println("and dryer are still accessible, but there are boxes stacked all over the place.");
         System.out.println();
         System.out.println("What would you like to observe?");
@@ -43,7 +43,7 @@ public class UtilitiesRoom {
                 //Print the dialogue about the Washing Machine
                 System.out.println("Just the average everyday washing machine. It came in a pair with the dryer, ");
                 System.out.println("designed so that both doors can be opened, and clothes can be easily moved ");
-                System.out.println("between. But the mechanics that installed them placed them in the opposite ");
+                System.out.println("between. But the mechanics who installed them placed them in the opposite ");
                 System.out.println("spots, causing the doors to collide when they are both opened.");
 
                 //Determine where the player wants to go next
@@ -61,7 +61,7 @@ public class UtilitiesRoom {
                 //Print the dialogue about the Dryer
                 System.out.println("I take a moment to relish in the greatness that is the dryer. I love wearing ");
                 System.out.println("clothes straight from the dryer. Surely, I’m not the only one that likes the ");
-                System.out.println("warm, fuzzy feeling of fresh clothes");
+                System.out.println("warm, fuzzy feeling of fresh clothes.");
 
                 //Determine where the player wants to go next
                 System.out.println();
@@ -75,7 +75,7 @@ public class UtilitiesRoom {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();

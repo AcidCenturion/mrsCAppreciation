@@ -29,9 +29,9 @@ public class Nightstand {
 
         //Detail the room. This String is printed every time the user enters the room
         System.out.println("On my nightstand I always keep a glass of water, just in case I need to keep hydrated. ");
-        System.out.println("I probably won’t be needing it at all today, I can just get water from the kitchen ");
+        System.out.println("I probably won’t be needing it at all today; I can just get water from the kitchen ");
         System.out.println("later. In the drawer I keep a spare flashlight in case power goes out. On the top of ");
-        System.out.println("my nightstand there’s… a letter? I don’t remember keeping letters on my nightstand.");
+        System.out.println("my nightstand there’s...a letter? I don’t remember keeping letters on my nightstand.");
         System.out.println();
         System.out.println("Where would you like to go?");
         System.out.println("1. Letter    2. Flashlight    3. Bedroom");
@@ -54,12 +54,12 @@ public class Nightstand {
                 System.out.println("I pick up the letter and look over the exterior it's in. The letter is poking ");
                 System.out.println("out of an envelope it was tucked in, and the envelope seems to have a little ");
                 System.out.println("bit of dirt and dust on it. It’s addressed to me, but I don’t recall receiving ");
-                System.out.println("any envelopes or letters. It’s a pretty antiquated method of communication, ");
+                System.out.println("any envelopes or letters. It’s a pretty antiquated method of communication; ");
                 System.out.println("nowadays we have email. I open the envelope and remove the letter from it. ");
-                System.out.println("The letter reads, ");
+                System.out.println("The letter reads: ");
                 System.out.println("\"Hello, Mrs. Carlson. We have something important to discuss with you. After ");
-                System.out.println("you complete your morning routines to the chicken coop, we ask that you would ");
-                System.out.println("please come see us in the Dining Room\"");
+                System.out.println("you complete your morning routines to the chicken coop, we ask that you please ");
+                System.out.println("come see us in the Dining Room.\"");
                 System.out.println("It wasn't signed at all. I put down the letter and look back at the rest of ");
                 System.out.println("the nightstand.");
 
@@ -79,7 +79,7 @@ public class Nightstand {
                 System.out.println("You never know when you’re going to need to see in the dark. I’ll take this ");
                 System.out.println("flashlight just in case.");
                 System.out.println("You obtained the Flashlight.");
-                System.out.println("I look back at the rest of the nightstand.");
+                System.out.println("I look back at the rest of the Nightstand.");
 
                 //Update flashlight variable to reflect that the player now has the flashlight
                 flashlight = true;
@@ -96,7 +96,7 @@ public class Nightstand {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();

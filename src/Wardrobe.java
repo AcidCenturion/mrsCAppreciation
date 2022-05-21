@@ -62,7 +62,7 @@ public class Wardrobe {
                     //inform user that they unlocked the passage
                     System.out.println("I feel around the keyhole until my mysterious key slides into the keyhole's");
                     System.out.println("oddly shaped slot. A perfect fit. As I turn the key, the wardrobe makes a ");
-                    System.out.println("creaking sound. It sounds like the grinding of gears. I have the feeling ");
+                    System.out.println("creaking sound. It sounds like the grinding of gears. I have a feeling that");
                     System.out.println("something has been opened.");
 
                     //then unlock the passage
@@ -88,7 +88,7 @@ public class Wardrobe {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();

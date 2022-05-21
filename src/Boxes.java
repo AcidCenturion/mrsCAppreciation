@@ -52,13 +52,13 @@ public class Boxes {
             if(userInput.equals("Blue Box")){
 
                 //Print the dialogue about the Small Blue Box
-                System.out.println("I reach for the blue box. Its a little light, It definitely doesn't weigh the ");
-                System.out.println("same as it looks it should. The box wasn't well sealed so i managed to open ");
-                System.out.println("it up with my hands. Inside was a soft, blue, penguin plush. It was rounded ");
+                System.out.println("I reach for the blue box. It's a little light and definitely doesn't weigh the ");
+                System.out.println("same as it looks it should. The box wasn't well sealed so I managed to open ");
+                System.out.println("it up with my hands. Inside was a soft, blue, penguin plush. It was round ");
                 System.out.println("in shape and its head wasn't defined separate from its body. It had cute, ");
                 System.out.println("beady eyes and an upside-down yellow triangle with rounded corners for a ");
                 System.out.println("beak. I didn't know I had such an adorable toy in my house, I wonder why I ");
-                System.out.println("left it in the Utilities Room. I'll name it Onigiri.");
+                System.out.println("left it in the utilities room. I'll name it Onigiri.");
 
                 //obtain penguin plush
                 System.out.println("You obtained Onigiri (Penguin Plush).");
@@ -99,19 +99,19 @@ public class Boxes {
 
                 //Print the dialogue about the Super Small Green Box
                 System.out.println("Sitting at the edge of the junk pile, practically begging to be picked up, ");
-                System.out.println("lay the small green box. I lean forward and grab the box. The green box was ");
+                System.out.println("lay the small green box. I reach forward and grab the box. The green box was ");
                 System.out.println("about the size of an envelope, with a little more depth. Its nicely wrapped ");
                 System.out.println("and packaged. Was this a gift from someone? I open up the present to ");
-                System.out.println("descover the box housed a lone key. ");
+                System.out.println("discover the box housed a lone key. ");
                 System.out.println("\"Huh, that’s strange. I don’t quite remember leaving this here. \"");
                 System.out.println("I don’t recognize the design or pattern of the key either. I take it with ");
-                System.out.println("me just in case");
+                System.out.println("me just in case.");
 
                 //update key information now that the player has acquired the key
                 key = true;
 
                 //inform user that the item was obtained
-                System.out.println("You obtained the Key");
+                System.out.println("You obtained the Key.");
 
                 //Determine where the player wants to go next
                 System.out.println();
@@ -125,7 +125,7 @@ public class Boxes {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();

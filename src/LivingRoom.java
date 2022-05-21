@@ -42,8 +42,8 @@ public class LivingRoom {
             //detail the new unlocked passage if unlocked
             System.out.println("As I return to the living room, I look around to see if anything moved. I ");
             System.out.println("noticed an opening behind the stairs.");
-            System.out.println("I don’t remember that when I bought the house.");
-            System.out.println("The opening was just about human sized. It seemed there was another room behind ");
+            System.out.println("I don’t remember that being there when I bought the house.");
+            System.out.println("The opening was just about human-sized. It seemed there was another room behind ");
             System.out.println("the opening.");
 
             System.out.println();
@@ -56,10 +56,10 @@ public class LivingRoom {
 
             //Detail the room. This String is printed every time the user enters the room
             System.out.println("Directly ahead from the staircase is the Dining Room, where I keep the rabbit ");
-            System.out.println("cage. To the left of the staircase, upon the wall, is the door to the utilities ");
-            System.out.println("room. It had a lot of extra space in it so the room eventually just became a ");
+            System.out.println("cage. To the left of the staircase, upon the wall, is the door to the Utilities ");
+            System.out.println("Room. It had a lot of extra space in it so the room eventually just became a ");
             System.out.println("place where I store my extra junk. To my right, across the room, is the sliding ");
-            System.out.println("glass door to the backyard. I can see the chicken coop standing alone in the ");
+            System.out.println("glass door to the Backyard. I can see the chicken coop standing alone in the ");
             System.out.println("backyard.");
 
             //Ask user where they desire to go
@@ -85,7 +85,7 @@ public class LivingRoom {
 
             //If an input was given that is not an option in this room, ask for a new input again
             //Inform the user to try again
-            System.out.println("Please input an option exactly as specified");
+            System.out.println("Please input an option exactly as specified.");
 
             //Scan again for new user input
             userInput = myScan.nextLine();

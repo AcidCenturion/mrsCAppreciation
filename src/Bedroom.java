@@ -28,7 +28,7 @@ public class Bedroom {
             firstEntry = false;
 
             //Print the first entry dialogue
-            System.out.println("I wake in a cold sweat.");
+            System.out.println("I wake up in a cold sweat.");
             System.out.println("\"That was just a dream... everything is normal. No big chickens or rabbits,\" ");
             System.out.println("I tell myself.");
             System.out.println();
@@ -38,7 +38,7 @@ public class Bedroom {
         Scanner myScan = new Scanner(System.in);
 
         //Detail the room. This String is printed every time the user enters the room
-        System.out.println("I double check the room just to make sure I'm not still in a dream like its ");
+        System.out.println("I double check the room just to make sure I'm not still in a dream like it's ");
         System.out.println("Inception or something. Everything is where I remember them to be. My queen-sized ");
         System.out.println("bed sits in the corner of the room, just under the window to the right. To my left ");
         System.out.println("is my nightstand where I keep emergency items on. Further past my nightstand ");
@@ -63,7 +63,7 @@ public class Bedroom {
             if(userInput.equals("Bed")){
 
                 //Print the dialogue about the Bed
-                System.out.println("My bed is nice and fluffy. It's warm enough to get me through the winter ");
+                System.out.println("My bed is nice and fluffy. It's warm enough to get me through the wintry ");
                 System.out.println("nights out here in Mooced. The blankets are in a bit of a mess due to my ");
                 System.out.println("abrupt waking from the nightmare. There’s nothing interesting here, so I ");
                 System.out.println("turn back to the room.");
@@ -97,7 +97,7 @@ public class Bedroom {
             else{
 
                 //Inform the user to try again
-                System.out.println("Please input an option exactly as specified");
+                System.out.println("Please input an option exactly as specified.");
 
                 //Scan again for new user input
                 userInput = myScan.nextLine();
