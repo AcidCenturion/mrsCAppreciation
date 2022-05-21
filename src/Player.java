@@ -244,14 +244,12 @@ public class Player {
             System.out.println("\"Well, anyways, thanks Mrs. Carlson for teaching us computer science. We wanted ");
             System.out.println("to thank you by displaying what we learned in this computer science project we ");
             System.out.println("worked on together\"");
-            System.out.println("Michael perks up again");
-            System.out.println("\"oh yeah, we left something for you in the files. The README file is a little ");
-            System.out.println("thank you note, and there’s a little bit of fun hidden in the folders. Here, ");
-            System.out.println("this might help navigate you\"");
-            System.out.println("He handed me a little slip of paper. It read, ");
-            System.out.println("\033[3mThanks to your help, 0 students failed this class. Comp sci is our #1 ");
-            System.out.println("favorite class, and we’re all going to get 5 on the AP exam. You're the #1 teacher ");
-            System.out.println("to guide all of us students to success. Thank you again, Mrs. Carlson\033[0m");
+            System.out.println("The students invite me to sit down and join them in their feast of eggs. Ahhh... ");
+            System.out.println("finally, the meal I've been waiting for. I ignore the fact that my basement is ");
+            System.out.println("apparently the APCS classroom, and that the students have been in my basement for ");
+            System.out.println("who knows how long. I'm glad I made the decision to wake up instead of going back to ");
+            System.out.println("sleep after that nightmare. Its a good thing I'm much better at keeping a good sleep ");
+            System.out.println("schedule than Michael is.");
         }
 
         //chicken ending
