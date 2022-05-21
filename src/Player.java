@@ -261,7 +261,21 @@ public class Player {
 
         //rabbit ending
         else{
-
+            System.out.println("After I retrieve the 2 prized chicken eggs, I return to the living room. Rabbits. ");
+            System.out.println("Rabbits are everywhere. But they're neatly lined up around the room, wearing ");
+            System.out.println("leather vests and belts with an array of tools");
+            System.out.println("\"Hoptastic work Mrs. C! I knew we could count on you- only a human of your exact ");
+            System.out.println("specifications could have done this! You should be proud of yourself! Rabbits of ");
+            System.out.println("liberty, hope, and easter soon-to-be, be proud too for we have triumphed in our ");
+            System.out.println("endeavor to attain the highly marketable chicken egg!!\"");
+            System.out.println("Normally, I would have silenced such an intruder, but talking rabbits and their ");
+            System.out.println("artistic missions are a bit out of the ordinary. While Czar Hops continues to talk ");
+            System.out.println("about hopes and dreams for the easter rabbits, I peruse the room- which for some ");
+            System.out.println("strange reason, changes into the setting of a CCA classroom.");
+            System.out.println("\033[3mIt's almost as if I went to an alternate universe. But why?\033[0m");
+            System.out.println("It seems like they're throwing a party for me here. With Chicken eggs. It's ");
+            System.out.println("absolutely the most amazing surprise I have been to. The hors' de touvere and eggs ");
+            System.out.println("benedict are all absolutely awesome.");
         }
     }
 }
