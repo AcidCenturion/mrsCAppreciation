@@ -256,7 +256,18 @@ public class Player {
 
         //chicken ending
         else if(location.equals("ChickenEnd")){
-
+            System.out.println("You return to the chicken coop with your eggs. You find Capt Cluck standing at ");
+            System.out.println("the front, and a platoon of chickens in formation stand behind him. Capt Cluck ");
+            System.out.println("gives you a nod, and you hand back the eggs that the rabbits stole.");
+            System.out.println("\"Thank you, soldier. Without your help, we may have found ourselves at war with ");
+            System.out.println("the rabbits for quite some time\"");
+            System.out.println("This chickens show you much gratitude, and even hold a ceremony in giving me the ");
+            System.out.println("chicken award of honor. As Capt Cluck congratulates and thanks me for returning ");
+            System.out.println("the eggs, I feel a wave of dissatisfaction. I remember that my original plans ");
+            System.out.println("today was to get some eggs for a snack. But now, I’ve just turned in those eggs ");
+            System.out.println("back to the chickens. I start imagining a table spread with all kinds of eggs, ");
+            System.out.println("cooked to perfection in every possible style. Maybe next time I should keep the ");
+            System.out.println("eggs to myself.");
         }
 
         //rabbit ending
