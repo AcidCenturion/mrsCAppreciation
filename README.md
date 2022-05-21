@@ -16,3 +16,6 @@ From, the 2021-2022 APCS Class
 Special Thanks to:
     Krystal Kwan
     Louisa Guevarra, CJ Alejandro, Edmund Chua (Script and Dialogue)
+
+Here's a video for the game making process:
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
