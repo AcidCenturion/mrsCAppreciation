@@ -45,11 +45,11 @@ public class Boxes {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Small Blue Box, Larger Red Box, Super Small Green Box
         //Options to move to a different scene: Return to Utilities Room
-        while(!userInput.equals("Utilities Room")){
+        while(!userInput.equalsIgnoreCase("Utilities Room")){
 
             //If the input was the Small Blue Box dead-end scenes,
             //detail the Small Blue Box and return to the Boxes scene afterwards
-            if(userInput.equals("Blue Box")){
+            if(userInput.equalsIgnoreCase("Blue Box")){
 
                 //Print the dialogue about the Small Blue Box
                 System.out.println("I reach for the blue box. It's a little light and definitely doesn't weigh the ");
@@ -74,7 +74,7 @@ public class Boxes {
 
             //If the input was the Larger Red Box dead-end scenes,
             //detail the Larger Red Box scene and return to the Boxes scene afterwards
-            else if(userInput.equals("Red Box")){
+            else if(userInput.equalsIgnoreCase("Red Box")){
 
                 //Print the dialogue about the Larger Red Box
                 System.out.println("I tried carrying the red box out of the junk pile but it was too heavy. I ");
@@ -95,7 +95,7 @@ public class Boxes {
 
             //If the input was the Super Small Green Box dead-end scenes,
             //detail the Larger Red Box scene and return to the Boxes scene afterwards
-            else if(userInput.equals("Green Box")){
+            else if(userInput.equalsIgnoreCase("Green Box")){
 
                 //Print the dialogue about the Super Small Green Box
                 System.out.println("Sitting at the edge of the junk pile, practically begging to be picked up, ");

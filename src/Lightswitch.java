@@ -51,15 +51,15 @@ public class Lightswitch {
         System.out.println();
 
         //ensure that the input was one of the options
-        while(!(userInput.equals("Attack") || (userInput.equals("Block")&&playerMana>=10)
-                || (userInput.equals("Heal")&&playerMana>=10)
-                || (userInput.equals("Attack Boost")&&playerMana>=10))){
+        while(!(userInput.equalsIgnoreCase("Attack") || (userInput.equalsIgnoreCase("Block")&&playerMana>=10)
+                || (userInput.equalsIgnoreCase("Heal")&&playerMana>=10)
+                || (userInput.equalsIgnoreCase("Attack Boost")&&playerMana>=10))){
 
             if(playerMana < 10){
                 System.out.println("You're out of mana.");
             }
 
-            if(userInput.equals("Info")){
+            if(userInput.equalsIgnoreCase("Info")){
                 System.out.println("You have " + playerHitPoints + " HP");
                 System.out.println("You have " + playerMana + " Mana");
                 System.out.println("Demonminator has " + rabbitHitPoints + " HP");
@@ -77,7 +77,7 @@ public class Lightswitch {
         }
 
         //determine what move was used
-        if(userInput.equals("Attack")){
+        if(userInput.equalsIgnoreCase("Attack")){
 
             //roll accuracy
             if(accuracy()){
@@ -108,7 +108,7 @@ public class Lightswitch {
                 System.out.println("Your attack missed!");
             }
         }
-        else if(userInput.equals("Block")){
+        else if(userInput.equalsIgnoreCase("Block")){
 
             //reduce damage from next incoming attack
             playerDefend = true;
@@ -122,7 +122,7 @@ public class Lightswitch {
 
             System.out.println("You brace for incoming damage.");
         }
-        else if(userInput.equals("Heal")){
+        else if(userInput.equalsIgnoreCase("Heal")){
 
             //heal player 7 hit points
             playerHitPoints += 7;

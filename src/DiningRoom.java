@@ -88,11 +88,11 @@ public class DiningRoom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Table
         //Options to move to a different scene: Windowsill, Rabbit Cage, Living Room
-        while(!(userInput.equals("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room"))){
 
             //If the player obtained the two eggs for the Rabbit ending
             //detail the ending and return the RabbitEnd
-            if(userInput.equals("Table") && egg1 && egg2){
+            if(userInput.equalsIgnoreCase("Table") && egg1 && egg2){
 
                 //detail ending
                 System.out.println("Rabbit Ending details...");
@@ -102,7 +102,7 @@ public class DiningRoom {
             }
 
             //if player communicates with the czar hops w/o the eggs
-            else if(userInput.equals("Table")){
+            else if(userInput.equalsIgnoreCase("Table")){
 
                 //detail the table and czar hops' instructions
                 System.out.println("\"What are you waiting for? Hop to it already.\"");
@@ -128,14 +128,14 @@ public class DiningRoom {
             }
 
             //if the player chooses the egg quests, ensure that they have met the chickens
-            else if(userInput.equals("Lightswitch") && chickenContact){
+            else if(userInput.equalsIgnoreCase("Lightswitch") && chickenContact){
 
                 //return the correct location
                 return "Lightswitch";
             }
 
             //ensure the chicken contact
-            else if(userInput.equals("Rabbit Cage") && chickenContact){
+            else if(userInput.equalsIgnoreCase("Rabbit Cage") && chickenContact){
 
                 //return the correct location
                 return "Rabbit Cage";

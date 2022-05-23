@@ -56,11 +56,11 @@ public class UnlockedBasement {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Inspect Altars
         //Options to move to a different scene: Living Room
-        while(!(userInput.equals("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room"))){
 
             //If the input was the Inspect Altars dead-end scene,
             //detail the Altars and return to the Unlocked Basement scene afterwards
-            if(userInput.equals("Inspect Altars") || light){
+            if(userInput.equalsIgnoreCase("Inspect Altars") || light){
 
                 //if the player has all four eggs
                 if(egg1 && egg2 && egg3 && egg4){

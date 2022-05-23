@@ -44,12 +44,12 @@ public class Wardrobe {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Keyhole (Item opportunity)
         //Options to move to a different scene: Return to Bedroom
-        while(!userInput.equals("Bedroom")){
+        while(!userInput.equalsIgnoreCase("Bedroom")){
 
             //If the input was the Keyhole dead-end scene,
             //check if the mysterious key was obtained
             //then detail the object depending on if the key was obtained
-            if(userInput.equals("Keyhole")){
+            if(userInput.equalsIgnoreCase("Keyhole")){
 
                 //Detail the keyhole
                 System.out.println("I take a closer look at the key hole. It has a golden trim around a strangely ");

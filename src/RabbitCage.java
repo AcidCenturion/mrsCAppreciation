@@ -108,7 +108,7 @@ public class RabbitCage {
                     "\n>>> ");
             userInput = myScan.nextLine();
             System.out.println();
-            while(!(userInput.equals("a") ||userInput.equals("b"))){
+            while(!(userInput.equalsIgnoreCase("a") ||userInput.equalsIgnoreCase("b"))){
                 //Inform the user to try again
                 System.out.println("Please input an option exactly as specified.");
 
@@ -116,7 +116,7 @@ public class RabbitCage {
                 userInput = myScan.nextLine();
                 System.out.println();
             }
-            if (userInput.equals("a")) {
+            if (userInput.equalsIgnoreCase("a")) {
                 playerHand.add(dealCard());
                 //check for bust
                 if (handScore(playerHand) > 21) {

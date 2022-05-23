@@ -93,11 +93,11 @@ public class Backyard {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Chicken Coop
         //Options to move to a different scene: Garden, Fence Gate, Living Room
-        while(!(userInput.equals("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room"))){
 
             //If the player obtained the two eggs for the chicken ending
             //detail the ending and return the ChickenEnd
-            if(userInput.equals("Chicken Coop") && egg3 && egg4){
+            if(userInput.equalsIgnoreCase("Chicken Coop") && egg3 && egg4){
 
                 //detail ending
                 System.out.println("Chicken Ending details...");
@@ -107,7 +107,7 @@ public class Backyard {
             }
 
             //if player communicates with the coop w/o the eggs
-            else if(userInput.equals("Chicken Coop")){
+            else if(userInput.equalsIgnoreCase("Chicken Coop")){
 
                 //detail chicken coop
                 System.out.println("Just an average chicken coop...an average chicken coop that now apparently ");
@@ -134,14 +134,14 @@ public class Backyard {
             }
 
             //if the player chooses the egg quests, ensure that they have met the rabbits
-            else if(userInput.equals("Garden") && rabbitContact){
+            else if(userInput.equalsIgnoreCase("Garden") && rabbitContact){
 
                 //return the correct location
                 return "Garden";
             }
 
             //ensure the rabbit contact
-            else if(userInput.equals("Fence Gate") && rabbitContact){
+            else if(userInput.equalsIgnoreCase("Fence Gate") && rabbitContact){
 
                 //return the correct location
                 return "Fence Gate";

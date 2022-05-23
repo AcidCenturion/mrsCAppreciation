@@ -70,10 +70,10 @@ public class Player {
         System.out.println();
 
         //make sure the user understands that they have to type the exact option
-        while(!userInput.equals("Wake Up")){
+        while(!userInput.equalsIgnoreCase("Wake Up")){
 
             //secret ending if the player choosese to remain asleep
-            if(userInput.equals("Snooze") || userInput.equals("Sleep")){
+            if(userInput.equalsIgnoreCase("Snooze") || userInput.equalsIgnoreCase("Sleep")){
                 System.out.println("Instead of choosing to wake up like a normal person, which was literally the ");
                 System.out.println("only option presented to you, you chose the only other possible choice: to ");
                 System.out.println("continue sleeping. And thus, you continued to sleep... and sleep... and sleep");
@@ -109,11 +109,11 @@ public class Player {
         }
 
         //Check to if the player has reached an ending
-        while(!(location.equals("ChickenEnd") || location.equals("RabbitEnd") || location.equals("TrueEnd"))){
+        while(!(location.equalsIgnoreCase("ChickenEnd") || location.equalsIgnoreCase("RabbitEnd") || location.equalsIgnoreCase("TrueEnd"))){
 
             //While they have not reached an ending, run the interactables method from the room they are in
             //Run the interactables from the Bedroom
-            if(location.equals("Bedroom")){
+            if(location.equalsIgnoreCase("Bedroom")){
 
                 //Call the interactables method
                 //Redefine the location using the method return
@@ -121,7 +121,7 @@ public class Player {
             }
 
             //Call interactables from the Nightstand
-            else if(location.equals("Nightstand")){
+            else if(location.equalsIgnoreCase("Nightstand")){
 
                 //Call the interactables method
                 //Redefine the location using the method return
@@ -129,7 +129,7 @@ public class Player {
             }
 
             //Call interactables from the Wardrobe
-            else if(location.equals("Wardrobe")){
+            else if(location.equalsIgnoreCase("Wardrobe")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -137,7 +137,7 @@ public class Player {
             }
 
             //call interactables from the Living Room
-            else if(location.equals("Living Room")){
+            else if(location.equalsIgnoreCase("Living Room")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -145,7 +145,7 @@ public class Player {
             }
 
             //call interactables from the Utilities Room
-            else if(location.equals("Utilities Room")){
+            else if(location.equalsIgnoreCase("Utilities Room")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -153,7 +153,7 @@ public class Player {
             }
 
             //call interactables method from the Boxes scene
-            else if(location.equals("Inspect Boxes")){
+            else if(location.equalsIgnoreCase("Inspect Boxes")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -161,7 +161,7 @@ public class Player {
             }
 
             //call interactables method from the Unlocked Basement scene
-            else if(location.equals("Unlocked Passage")){
+            else if(location.equalsIgnoreCase("Unlocked Passage")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -170,7 +170,7 @@ public class Player {
             }
 
             //call interactables method from the Backyard scene
-            else if(location.equals("Backyard")){
+            else if(location.equalsIgnoreCase("Backyard")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -178,7 +178,7 @@ public class Player {
             }
 
             //call interactables method from the Dining Room scene
-            else if(location.equals("Dining Room")){
+            else if(location.equalsIgnoreCase("Dining Room")){
 
                 //call the interactables method
                 //redefine the location using the method return
@@ -186,7 +186,7 @@ public class Player {
             }
 
             //call the game from the Lightswitch scene
-            else if(location.equals("Lightswitch")){
+            else if(location.equalsIgnoreCase("Lightswitch")){
 
                 //call the game
                 eggQuest3.runGame();
@@ -196,7 +196,7 @@ public class Player {
             }
 
             //call the game from the FenceGate scene
-            else if(location.equals("Fence Gate")){
+            else if(location.equalsIgnoreCase("Fence Gate")){
 
                 //call the game
                 eggQuest2.TTT();
@@ -206,7 +206,7 @@ public class Player {
             }
 
             //call the game from the Garden scene
-            else if(location.equals("Garden")){
+            else if(location.equalsIgnoreCase("Garden")){
 
                 //call the game
                 eggQuest1.eggQuest();
@@ -216,7 +216,7 @@ public class Player {
             }
 
             //call the game from the RabbitCage
-            else if(location.equals("Rabbit Cage")){
+            else if(location.equalsIgnoreCase("Rabbit Cage")){
 
                 //call the game
                 eggQuest4.runGame();
@@ -227,7 +227,7 @@ public class Player {
         }
 
         //print the correct ending
-        if(location.equals("TrueEnd")){
+        if(location.equalsIgnoreCase("TrueEnd")){
 
             //true end from basement
             System.out.println("Almost as soon as I step foot inside the new room, lights flick on from above. ");
@@ -253,7 +253,7 @@ public class Player {
         }
 
         //chicken ending
-        else if(location.equals("ChickenEnd")){
+        else if(location.equalsIgnoreCase("ChickenEnd")){
             System.out.println("You return to the chicken coop with your eggs. You find Capt Cluck standing at ");
             System.out.println("the front, and a platoon of chickens in formation stand behind him. Capt Cluck ");
             System.out.println("gives you a nod, and you hand back the eggs that the rabbits stole.");

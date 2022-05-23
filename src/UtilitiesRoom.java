@@ -34,11 +34,11 @@ public class UtilitiesRoom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Washing Machine, Dryer
         //Options to move to a different scene: Inspect Boxes, Return to Living Room
-        while(!(userInput.equals("Living Room") || userInput.equals("Inspect Boxes"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Inspect Boxes"))){
 
             //If the input was the Washing Machine dead-end scenes,
             //detail the Washing Machine and return to the Utilities Room scene afterwards
-            if(userInput.equals("Washing Machine")){
+            if(userInput.equalsIgnoreCase("Washing Machine")){
 
                 //Print the dialogue about the Washing Machine
                 System.out.println("Just the average everyday washing machine. It came in a pair with the dryer, ");
@@ -56,7 +56,7 @@ public class UtilitiesRoom {
 
             //If the input was the Dryer dead-end scenes,
             //detail the Dryer scene and return to the Utilities Room scene afterwards
-            else if(userInput.equals("Dryer")){
+            else if(userInput.equalsIgnoreCase("Dryer")){
 
                 //Print the dialogue about the Dryer
                 System.out.println("I take a moment to relish in the greatness that is the dryer. I love wearing ");

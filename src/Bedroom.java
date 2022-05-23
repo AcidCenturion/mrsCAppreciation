@@ -56,11 +56,11 @@ public class Bedroom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Bed, Window
         //Options to move to a different scene: Living Room, Nightstand, Wardrobe (Key Item Required)
-        while(!(userInput.equals("Living Room") || userInput.equals("Nightstand") || userInput.equals("Wardrobe"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Nightstand") || userInput.equalsIgnoreCase("Wardrobe"))){
 
             //If the input was the Bed dead-end scenes,
             //detail the Bed scene and return to the Bedroom scene afterwards
-            if(userInput.equals("Bed")){
+            if(userInput.equalsIgnoreCase("Bed")){
 
                 //Print the dialogue about the Bed
                 System.out.println("My bed is nice and fluffy. It's warm enough to get me through the wintry ");
@@ -78,7 +78,7 @@ public class Bedroom {
 
             //If the input was the Window dead-end scenes,
             //detail the Nightstand scene and return to the Bedroom scene afterwards
-            else if(userInput.equals("Window")){
+            else if(userInput.equalsIgnoreCase("Window")){
 
                 //Print the dialogue about the Nightstand
                 System.out.println("I look outside my bedroom window. It’s a bit cloudy from the morning dew, ");
