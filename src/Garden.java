@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class Garden {
+
+    //Scanner object
+    Scanner myScan = new Scanner(System.in);
+    private String userInput;
+
     /* Zoplex's Egg Quest 1 : Quiz*/
     private boolean egg = false;
 
@@ -9,11 +14,70 @@ public class Garden {
         return egg;
     }
 
+    private String newLocation(boolean egg3, boolean egg4){
+
+        System.out.println("What would you like to observe?");
+        System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+
+        //scan for user's answer
+        String userInput = myScan.nextLine();
+        System.out.println();
+
+        //Check that the user inputted an acceptable input to move to a different scene
+        //If it was not, ask for a new input until a proper input is given
+        //Dead-end Scenes: Chicken Coop
+        //Options to move to a different scene: Garden, Fence Gate, Living Room
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Garden") || userInput.equalsIgnoreCase("Fence Gate"))){
+
+            //If the player obtained the two eggs for the chicken ending
+            //detail the ending and return the ChickenEnd
+            if(userInput.equalsIgnoreCase("Chicken Coop") && egg3 && egg4){
+
+                //detail ending
+                System.out.println("Chicken Ending details...");
+
+                //return the ending
+                return "ChickenEnd";
+            }
+
+            //if player communicates with the coop w/o the eggs
+            else if(userInput.equalsIgnoreCase("Chicken Coop")){
+
+                //detail chicken coop
+                System.out.println("Just an average chicken coop...an average chicken coop that now apparently ");
+                System.out.println("acts as the base of operations for a chicken militia.");
+                System.out.println();
+
+                //offer different options based on if the rabbits gave instructions
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+
+                //Receive the user's input
+                userInput = myScan.nextLine();
+                System.out.println();
+            }
+
+            //If an input was given that is not an option in this room, ask for a new input again
+            else{
+
+                //Inform the user to try again
+                System.out.println("Please input an option exactly as specified.");
+
+                //Scan again for new user input
+                userInput = myScan.nextLine();
+                System.out.println();
+            }
+        }
+
+        //Go to where player specifies
+        return userInput;
+    }
+
     /* Create method to run the quiz
      * no return, edit egg value
      * no param
      */
-    public void eggQuest(){
+    public String eggQuest(boolean egg3, boolean egg4){
 
         //Introduction
         System.out.println("I enter the garden and look for Zoplex. Just like Czar Hops said, I find a chicken ");
@@ -23,9 +87,6 @@ public class Garden {
         System.out.println("if thou wouldst like to ownth it thou must passth minest most strenuous of quizzes!\"");
         System.out.println("\033[3mWhat is he even saying???\033[0m");
         System.out.println();
-
-        //Scanner object
-        Scanner myScan = new Scanner(System.in);
 
         //ask first question
         System.out.println("\"I grace thee with thine first question:");
@@ -48,7 +109,7 @@ public class Garden {
             System.out.println();
 
             //if they gave the wrong answer
-            return;
+            return newLocation(egg3, egg4);
         }
 
         //continue the quiz
@@ -58,7 +119,7 @@ public class Garden {
         System.out.println();
 
         //check for correct answer
-        if(!(userInput.equalsIgnoreCase("not important")||userInput.equals("1"))){
+        if(!(userInput.equalsIgnoreCase("very important")||userInput.equals("3"))){
 
             //inform user they were incorrect
             System.out.println("\"haHA!! I knewst such a lowly lifeform as thyself couldst not possibly passetheth ");
@@ -69,7 +130,7 @@ public class Garden {
             System.out.println();
 
             //if they gave the wrong answer
-            return;
+            return newLocation(egg3, egg4);
         }
 
         //continue the quiz
@@ -90,7 +151,7 @@ public class Garden {
             System.out.println();
 
             //if they gave the wrong answer
-            return;
+            return newLocation(egg3, egg4);
         }
 
         //continue the quiz
@@ -111,7 +172,7 @@ public class Garden {
             System.out.println();
 
             //if they gave the wrong answer
-            return;
+            return newLocation(egg3, egg4);
         }
 
         System.out.println("\"HOW CAN THIS BE?? HOWDST THOU PASSETH MINE TEST WITH SUCH EASE?! Thou must’ve ");
@@ -124,5 +185,8 @@ public class Garden {
         System.out.println("\033[3m... Do not bite the hand that feeds you, chicken.\033[0m");
         System.out.println();
         egg = true;
+
+        return newLocation(egg3, egg4);
+
     }
 }

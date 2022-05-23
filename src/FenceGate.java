@@ -14,6 +14,7 @@ public class FenceGate {
 
     private Scanner input1 = new Scanner(System.in);
     private Scanner input2 = new Scanner(System.in);
+    private Scanner myScan = new Scanner(System.in);
 
     private int playerCol = 4;
     private int playerCount = 0;
@@ -51,6 +52,64 @@ public class FenceGate {
         return botCol;
     }
 
+    private String newLocation(boolean egg3, boolean egg4){
+
+        System.out.println("What would you like to observe?");
+        System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+
+        //scan for user's answer
+        String userInput = myScan.nextLine();
+        System.out.println();
+
+        //Check that the user inputted an acceptable input to move to a different scene
+        //If it was not, ask for a new input until a proper input is given
+        //Dead-end Scenes: Chicken Coop
+        //Options to move to a different scene: Garden, Fence Gate, Living Room
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Garden") || userInput.equalsIgnoreCase("Fence Gate"))){
+
+            //If the player obtained the two eggs for the chicken ending
+            //detail the ending and return the ChickenEnd
+            if(userInput.equalsIgnoreCase("Chicken Coop") && egg3 && egg4){
+
+                //detail ending
+                System.out.println("Chicken Ending details...");
+
+                //return the ending
+                return "ChickenEnd";
+            }
+
+            //if player communicates with the coop w/o the eggs
+            else if(userInput.equalsIgnoreCase("Chicken Coop")){
+
+                //detail chicken coop
+                System.out.println("Just an average chicken coop...an average chicken coop that now apparently ");
+                System.out.println("acts as the base of operations for a chicken militia.");
+                System.out.println();
+
+                //offer different options based on if the rabbits gave instructions
+                System.out.println("What would you like to observe?");
+                System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+
+                //Receive the user's input
+                userInput = myScan.nextLine();
+                System.out.println();
+            }
+
+            //If an input was given that is not an option in this room, ask for a new input again
+            else{
+
+                //Inform the user to try again
+                System.out.println("Please input an option exactly as specified.");
+
+                //Scan again for new user input
+                userInput = myScan.nextLine();
+                System.out.println();
+            }
+        }
+
+        //Go to where player specifies
+        return userInput;
+    }
 
     String[] askMoves(){
         playerMoves[0] = "X";
@@ -282,9 +341,8 @@ public class FenceGate {
         }
     }
 
-
     //run the game
-    public void TTT(){
+    public String TTT(boolean egg3, boolean egg4){
 
         //reset game state
         botCol = 4;
@@ -329,15 +387,16 @@ public class FenceGate {
                 System.out.println();
                 egg = true;
 
-                break;
+                return newLocation(egg3, egg4);
+
             }
             if((gameStatus(getBoard())).equals("tie")){
                 System.out.println("\nTie Game.");
                 printGameboard(getBoard());
 
                 System.out.println();
+                return newLocation(egg3, egg4);
 
-                break;
             }
 
             addToBoard(botMoves());
@@ -347,10 +406,12 @@ public class FenceGate {
                 printGameboard(getBoard());
 
                 System.out.println();
+                return newLocation(egg3, egg4);
 
-                break;
             }
         }
+        return newLocation(egg3, egg4);
+
         //README
         /*
         TicTacToe class:

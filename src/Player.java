@@ -189,40 +189,31 @@ public class Player {
             else if(location.equalsIgnoreCase("Lightswitch")){
 
                 //call the game
-                eggQuest3.runGame();
-
                 //reset player location back to dining room
-                location = "Dining Room";
+                location = eggQuest3.runGame(eggQuest1.getEgg(), eggQuest2.getEgg());
             }
 
             //call the game from the FenceGate scene
             else if(location.equalsIgnoreCase("Fence Gate")){
 
                 //call the game
-                eggQuest2.TTT();
-
                 //reset location
-                location = "Backyard";
+                location = eggQuest2.TTT(eggQuest3.getEgg(), eggQuest4.getEgg());
             }
 
             //call the game from the Garden scene
             else if(location.equalsIgnoreCase("Garden")){
 
-                //call the game
-                eggQuest1.eggQuest();
-
                 //reset location
-                location = "Backyard";
+                location = eggQuest1.eggQuest(eggQuest3.getEgg(), eggQuest4.getEgg());
             }
 
             //call the game from the RabbitCage
             else if(location.equalsIgnoreCase("Rabbit Cage")){
 
                 //call the game
-                eggQuest4.runGame();
-
                 //reset location
-                location = "Dining Room";
+                location = eggQuest4.runGame(eggQuest1.getEgg(), eggQuest2.getEgg());
             }
         }
 
