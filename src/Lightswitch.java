@@ -51,9 +51,10 @@ public class Lightswitch {
         System.out.println();
 
         //ensure that the input was one of the options
-        while(!(userInput.equalsIgnoreCase("Attack") || (userInput.equalsIgnoreCase("Block")&&playerMana>=10)
-                || (userInput.equalsIgnoreCase("Heal")&&playerMana>=10)
-                || (userInput.equalsIgnoreCase("Attack Boost")&&playerMana>=10))){
+        while(!(userInput.equalsIgnoreCase("Attack") || userInput.equals("1")
+                || (userInput.equalsIgnoreCase("Block")&&playerMana>=10)||(userInput.equals("2")&&playerMana>=10)
+                || (userInput.equalsIgnoreCase("Heal")&&playerMana>=10)||(userInput.equals("3")&&playerMana>=10)
+                || (userInput.equalsIgnoreCase("Attack Boost")&&playerMana>=10)||(userInput.equals("4")&&playerMana>=10))){
 
             if(playerMana < 10){
                 System.out.println("You're out of mana.");
@@ -77,7 +78,7 @@ public class Lightswitch {
         }
 
         //determine what move was used
-        if(userInput.equalsIgnoreCase("Attack")){
+        if(userInput.equalsIgnoreCase("Attack") || userInput.equals("1")){
 
             //roll accuracy
             if(accuracy()){
@@ -108,7 +109,7 @@ public class Lightswitch {
                 System.out.println("Your attack missed!");
             }
         }
-        else if(userInput.equalsIgnoreCase("Block")){
+        else if(userInput.equalsIgnoreCase("Block")||userInput.equals("2")){
 
             //reduce damage from next incoming attack
             playerDefend = true;
@@ -122,7 +123,7 @@ public class Lightswitch {
 
             System.out.println("You brace for incoming damage.");
         }
-        else if(userInput.equalsIgnoreCase("Heal")){
+        else if(userInput.equalsIgnoreCase("Heal")||userInput.equals("3")){
 
             //heal player 7 hit points
             playerHitPoints += 7;
@@ -372,17 +373,19 @@ public class Lightswitch {
 
         //Detail the room. This String is printed every time the user enters the room
         System.out.println("What would you like to observe?");
-        System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
+        System.out.println("1. Table    2. Living Room    3. Lightswitch    4. Rabbit Cage");
 
         //Receive the user's input
         String userInput = myScan.nextLine();
         System.out.println();
 
-        while(!(userInput.equalsIgnoreCase("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room")||userInput.equals("2")
+        ||userInput.equalsIgnoreCase("Lightswitch")||userInput.equals("3")
+        ||userInput.equalsIgnoreCase("Rabbit Cage")||userInput.equals("4"))){
 
             //If the player obtained the two eggs for the Rabbit ending
             //detail the ending and return the RabbitEnd
-            if(userInput.equalsIgnoreCase("Table") && egg1 && egg2){
+            if((userInput.equalsIgnoreCase("Table")||userInput.equals("1")) && egg1 && egg2){
 
                 //detail ending
                 System.out.println("Rabbit Ending details...");
@@ -392,7 +395,7 @@ public class Lightswitch {
             }
 
             //if player communicates with the czar hops w/o the eggs
-            else if(userInput.equalsIgnoreCase("Table")){
+            else if(userInput.equalsIgnoreCase("Table")||userInput.equals("1")){
 
                 //detail the table and czar hops' instructions
                 System.out.println("\"What are you waiting for? Hop to it already.\"");
@@ -400,26 +403,12 @@ public class Lightswitch {
 
                 //offer different options based on if the chickens gave instructions
                 System.out.println("What would you like to observe?");
-                System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
+                System.out.println("1. Table    2. Living Room    3. Lightswitch    4. Rabbit Cage");
 
                 //Receive the user's input
                 userInput = myScan.nextLine();
                 System.out.println();
 
-            }
-
-            //if the player chooses the egg quests, ensure that they have met the chickens
-            else if(userInput.equalsIgnoreCase("Lightswitch")){
-
-                //return the correct location
-                return "Lightswitch";
-            }
-
-            //ensure the chicken contact
-            else if(userInput.equalsIgnoreCase("Rabbit Cage")){
-
-                //return the correct location
-                return "Rabbit Cage";
             }
 
             //If an input was given that is not an option in this room, ask for a new input again
@@ -434,6 +423,17 @@ public class Lightswitch {
             }
         }
         //Go to where player specifies
+        if(userInput.equals("2")){
+            return "Living Room";
+        }
+        else if(userInput.equals("3")){
+        //return the correct location
+        return "Lightswitch";
+        }
+        else if(userInput.equals("4")){
+            //return the correct location
+            return "Rabbit Cage";
+        }
         return userInput;
     }
 }

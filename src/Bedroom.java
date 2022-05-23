@@ -56,11 +56,13 @@ public class Bedroom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Bed, Window
         //Options to move to a different scene: Living Room, Nightstand, Wardrobe (Key Item Required)
-        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Nightstand") || userInput.equalsIgnoreCase("Wardrobe"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equals("5")
+                || userInput.equalsIgnoreCase("Nightstand") || userInput.equals("3")
+                || userInput.equalsIgnoreCase("Wardrobe") || userInput.equals("4"))){
 
             //If the input was the Bed dead-end scenes,
             //detail the Bed scene and return to the Bedroom scene afterwards
-            if(userInput.equalsIgnoreCase("Bed")){
+            if(userInput.equalsIgnoreCase("Bed") || userInput.equals("1")){
 
                 //Print the dialogue about the Bed
                 System.out.println("My bed is nice and fluffy. It's warm enough to get me through the wintry ");
@@ -78,7 +80,7 @@ public class Bedroom {
 
             //If the input was the Window dead-end scenes,
             //detail the Nightstand scene and return to the Bedroom scene afterwards
-            else if(userInput.equalsIgnoreCase("Window")){
+            else if(userInput.equalsIgnoreCase("Window") || userInput.equals("2")){
 
                 //Print the dialogue about the Nightstand
                 System.out.println("I look outside my bedroom window. It’s a bit cloudy from the morning dew, ");
@@ -106,6 +108,17 @@ public class Bedroom {
         }
 
         //Return the new location that the user specified
-        return userInput;
+        if(userInput.equals("3")){
+            return "Nightstand";
+        }
+        else if(userInput.equals("4")){
+            return "Wardrobe";
+        }
+        else if(userInput.equals("5")){
+            return "Living Room";
+        }
+        else{
+            return userInput;
+        }
     }
 }

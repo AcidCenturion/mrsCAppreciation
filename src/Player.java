@@ -70,7 +70,7 @@ public class Player {
         System.out.println();
 
         //make sure the user understands that they have to type the exact option
-        while(!userInput.equalsIgnoreCase("Wake Up")){
+        while(!(userInput.equalsIgnoreCase("Wake Up")||userInput.equals("1"))){
 
             //secret ending if the player choosese to remain asleep
             if(userInput.equalsIgnoreCase("Snooze") || userInput.equalsIgnoreCase("Sleep")){

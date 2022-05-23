@@ -61,7 +61,7 @@ public class Backyard {
             System.out.println("want to have eggs for breakfast, I’ll just have to go along with it.");
             System.out.println();
             System.out.println("What would you like to observe?");
-            System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+            System.out.println("1. Chicken Coop    2. Living Room    3. Garden    4. Fence Gate");
         }
 
         //if the player has not heard from czar hops yet
@@ -93,11 +93,11 @@ public class Backyard {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Chicken Coop
         //Options to move to a different scene: Garden, Fence Gate, Living Room
-        while(!(userInput.equalsIgnoreCase("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equals("2"))){
 
             //If the player obtained the two eggs for the chicken ending
             //detail the ending and return the ChickenEnd
-            if(userInput.equalsIgnoreCase("Chicken Coop") && egg3 && egg4){
+            if((userInput.equalsIgnoreCase("Chicken Coop") || userInput.equals("1")) && egg3 && egg4){
 
                 //detail ending
                 System.out.println("Chicken Ending details...");
@@ -107,7 +107,7 @@ public class Backyard {
             }
 
             //if player communicates with the coop w/o the eggs
-            else if(userInput.equalsIgnoreCase("Chicken Coop")){
+            else if((userInput.equalsIgnoreCase("Chicken Coop") || userInput.equals("1"))){
 
                 //detail chicken coop
                 System.out.println("Just an average chicken coop...an average chicken coop that now apparently ");
@@ -117,7 +117,7 @@ public class Backyard {
                 //offer different options based on if the rabbits gave instructions
                 if(rabbitContact){
                     System.out.println("What would you like to observe?");
-                    System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+                    System.out.println("1. Chicken Coop    2. Living Room    3. Garden    4. Fence Gate");
 
                     //Receive the user's input
                     userInput = myScan.nextLine();
@@ -134,14 +134,14 @@ public class Backyard {
             }
 
             //if the player chooses the egg quests, ensure that they have met the rabbits
-            else if(userInput.equalsIgnoreCase("Garden") && rabbitContact){
+            else if((userInput.equalsIgnoreCase("Garden")||userInput.equals("3")) && rabbitContact){
 
                 //return the correct location
                 return "Garden";
             }
 
             //ensure the rabbit contact
-            else if(userInput.equalsIgnoreCase("Fence Gate") && rabbitContact){
+            else if((userInput.equalsIgnoreCase("Fence Gate")||userInput.equals("4")) && rabbitContact){
 
                 //return the correct location
                 return "Fence Gate";
@@ -160,6 +160,6 @@ public class Backyard {
         }
 
         //Go to where player specifies
-        return userInput;
+        return "Living Room";
     }
 }

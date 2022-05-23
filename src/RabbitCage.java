@@ -102,13 +102,13 @@ public class RabbitCage {
             System.out.print(dealerHand.get(0));
             System.out.println("   ?");
 
-            System.out.print("\nWhat would you like to do? (Please enter the letter a or b) " +
-                    "\n\ta) hit (add a card)" +
-                    "\n\tb) stay (do not draw a card)" +
+            System.out.print("\nWhat would you like to do? (Please enter the number 1 or 2) " +
+                    "\n\t1) hit (add a card)" +
+                    "\n\t2) stay (do not draw a card)" +
                     "\n>>> ");
             userInput = myScan.nextLine();
             System.out.println();
-            while(!(userInput.equalsIgnoreCase("a") ||userInput.equalsIgnoreCase("b"))){
+            while(!(userInput.equalsIgnoreCase("1") ||userInput.equalsIgnoreCase("2"))){
                 //Inform the user to try again
                 System.out.println("Please input an option exactly as specified.");
 
@@ -116,7 +116,7 @@ public class RabbitCage {
                 userInput = myScan.nextLine();
                 System.out.println();
             }
-            if (userInput.equalsIgnoreCase("a")) {
+            if (userInput.equalsIgnoreCase("1")) {
                 playerHand.add(dealCard());
                 //check for bust
                 if (handScore(playerHand) > 21) {
@@ -182,19 +182,22 @@ public class RabbitCage {
             }
         }
         System.out.println();
-//Detail the room. This String is printed every time the user enters the room
-        System.out.println("What would you like to observe?");
-        System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
 
-//Receive the user's input
+        //Detail the room. This String is printed every time the user enters the room
+        System.out.println("What would you like to observe?");
+        System.out.println("1. Table    2. Living Room    3. Lightswitch    4. Rabbit Cage");
+
+        //Receive the user's input
         String userInput = myScan.nextLine();
         System.out.println();
 
-        while(!(userInput.equalsIgnoreCase("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room")||userInput.equals("2")
+                ||userInput.equalsIgnoreCase("Lightswitch")||userInput.equals("3")
+                ||userInput.equalsIgnoreCase("Rabbit Cage")||userInput.equals("4"))){
 
             //If the player obtained the two eggs for the Rabbit ending
             //detail the ending and return the RabbitEnd
-            if(userInput.equalsIgnoreCase("Table") && egg1 && egg2){
+            if((userInput.equalsIgnoreCase("Table")||userInput.equals("1")) && egg1 && egg2){
 
                 //detail ending
                 System.out.println("Rabbit Ending details...");
@@ -204,7 +207,7 @@ public class RabbitCage {
             }
 
             //if player communicates with the czar hops w/o the eggs
-            else if(userInput.equalsIgnoreCase("Table")){
+            else if(userInput.equalsIgnoreCase("Table")||userInput.equals("1")){
 
                 //detail the table and czar hops' instructions
                 System.out.println("\"What are you waiting for? Hop to it already.\"");
@@ -212,26 +215,12 @@ public class RabbitCage {
 
                 //offer different options based on if the chickens gave instructions
                 System.out.println("What would you like to observe?");
-                System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
+                System.out.println("1. Table    2. Living Room    3. Lightswitch    4. Rabbit Cage");
 
                 //Receive the user's input
                 userInput = myScan.nextLine();
                 System.out.println();
 
-            }
-
-            //if the player chooses the egg quests, ensure that they have met the chickens
-            else if(userInput.equalsIgnoreCase("Lightswitch")){
-
-                //return the correct location
-                return "Lightswitch";
-            }
-
-            //ensure the chicken contact
-            else if(userInput.equalsIgnoreCase("Rabbit Cage")){
-
-                //return the correct location
-                return "Rabbit Cage";
             }
 
             //If an input was given that is not an option in this room, ask for a new input again
@@ -246,6 +235,17 @@ public class RabbitCage {
             }
         }
         //Go to where player specifies
+        if(userInput.equals("2")){
+            return "Living Room";
+        }
+        else if(userInput.equals("3")){
+            //return the correct location
+            return "Lightswitch";
+        }
+        else if(userInput.equals("4")){
+            //return the correct location
+            return "Rabbit Cage";
+        }
         return userInput;
     }
 }

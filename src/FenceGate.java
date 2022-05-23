@@ -55,7 +55,7 @@ public class FenceGate {
     private String newLocation(boolean egg3, boolean egg4){
 
         System.out.println("What would you like to observe?");
-        System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+        System.out.println("1. Chicken Coop    2. Living Room    3. Garden    4. Fence Gate");
 
         //scan for user's answer
         String userInput = myScan.nextLine();
@@ -65,11 +65,13 @@ public class FenceGate {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Chicken Coop
         //Options to move to a different scene: Garden, Fence Gate, Living Room
-        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Garden") || userInput.equalsIgnoreCase("Fence Gate"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equals("2")
+                || userInput.equalsIgnoreCase("Garden") || userInput.equals("3")
+                || userInput.equalsIgnoreCase("Fence Gate") || userInput.equals("4"))){
 
             //If the player obtained the two eggs for the chicken ending
             //detail the ending and return the ChickenEnd
-            if(userInput.equalsIgnoreCase("Chicken Coop") && egg3 && egg4){
+            if((userInput.equalsIgnoreCase("Chicken Coop")||userInput.equals("1")) && egg3 && egg4){
 
                 //detail ending
                 System.out.println("Chicken Ending details...");
@@ -79,7 +81,7 @@ public class FenceGate {
             }
 
             //if player communicates with the coop w/o the eggs
-            else if(userInput.equalsIgnoreCase("Chicken Coop")){
+            else if(userInput.equalsIgnoreCase("Chicken Coop") || userInput.equals("1")){
 
                 //detail chicken coop
                 System.out.println("Just an average chicken coop...an average chicken coop that now apparently ");
@@ -88,7 +90,7 @@ public class FenceGate {
 
                 //offer different options based on if the rabbits gave instructions
                 System.out.println("What would you like to observe?");
-                System.out.println("1. Garden    2. Fence Gate    3. Chicken Coop    4. Living Room");
+                System.out.println("1. Chicken Coop    2. Living Room    3. Garden    4. Fence Gate");
 
                 //Receive the user's input
                 userInput = myScan.nextLine();
@@ -108,6 +110,15 @@ public class FenceGate {
         }
 
         //Go to where player specifies
+        if(userInput.equals("2")){
+            return "Living Room";
+        }
+        else if(userInput.equals("3")){
+            return "Garden";
+        }
+        else if(userInput.equals("4")){
+            return "Fence Gate";
+        }
         return userInput;
     }
 

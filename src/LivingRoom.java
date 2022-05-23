@@ -76,11 +76,15 @@ public class LivingRoom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: None
         //Options to move to a different scene: Backyard, Utilities Room, Dining Room, Bedroom, Unlocked Passage
-        while(!(userInput.equalsIgnoreCase("Backyard") || userInput.equalsIgnoreCase("Utilities Room") || userInput.equalsIgnoreCase("Dining Room") || userInput.equalsIgnoreCase("Bedroom"))){
+        while(!(userInput.equalsIgnoreCase("Backyard") || userInput.equals("1")
+                || userInput.equalsIgnoreCase("Utilities Room") || userInput.equals("2")
+                || userInput.equalsIgnoreCase("Dining Room") || userInput.equals("3")
+                || userInput.equalsIgnoreCase("Bedroom") || userInput.equals("4"))){
 
             //If the unlocked passage was chosen, confirm that the player had unlocked the passage
-            if(userInput.equalsIgnoreCase("Unlocked Passage") && passageUnlocked){
-                return userInput;
+            if((userInput.equalsIgnoreCase("Unlocked Passage") || userInput.equals("5"))
+                    && passageUnlocked){
+                return "Unlocked Passage";
             }
 
             //If an input was given that is not an option in this room, ask for a new input again
@@ -93,6 +97,20 @@ public class LivingRoom {
         }
 
         //Return the new location that the user specified
-        return userInput;
+        if(userInput.equals("1")){
+            return "Backyard";
+        }
+        else if(userInput.equals("2")){
+            return "Utilities Room";
+        }
+        else if(userInput.equals("3")){
+            return "Dining Room";
+        }
+        else if(userInput.equals("4")){
+            return "Bedroom";
+        }
+        else{
+            return userInput;
+        }
     }
 }

@@ -48,7 +48,7 @@ public class DiningRoom {
         //inform backyard that instructions have been received
         rabbitInteraction = true;
 
-        //Has the player recieved the misssions from the chickens?
+        //Has the player received the missions from the chickens?
         if(chickenContact){
 
             //Detail the room. This String is printed every time the user enters the room
@@ -58,10 +58,10 @@ public class DiningRoom {
             System.out.println("dream, hmm? I need you to get two eggs from those annoying chickens. They’re ");
             System.out.println("outside in the [Backyard] somewhere. That Zoplex fellow is probably in the garden, ");
             System.out.println("he has some weird obsession with hoses. Chuck is probably banging his head into ");
-            System.out.println("the [Fence Gate]. The dummy doesn't know how to use a door latch.\"");
+            System.out.println("the Fence Gate. The dummy doesn't know how to use a door latch.\"");
             System.out.println();
             System.out.println("What would you like to observe?");
-            System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
+            System.out.println("1. Table    2. Living Room    3. Lightswitch    4. Rabbit Cage");
         }
 
         //if the player has not heard from capt cluck yet
@@ -88,11 +88,11 @@ public class DiningRoom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Table
         //Options to move to a different scene: Windowsill, Rabbit Cage, Living Room
-        while(!(userInput.equalsIgnoreCase("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equals("2"))){
 
             //If the player obtained the two eggs for the Rabbit ending
             //detail the ending and return the RabbitEnd
-            if(userInput.equalsIgnoreCase("Table") && egg1 && egg2){
+            if((userInput.equalsIgnoreCase("Table")||userInput.equals("1")) && egg1 && egg2){
 
                 //detail ending
                 System.out.println("Rabbit Ending details...");
@@ -102,7 +102,7 @@ public class DiningRoom {
             }
 
             //if player communicates with the czar hops w/o the eggs
-            else if(userInput.equalsIgnoreCase("Table")){
+            else if(userInput.equalsIgnoreCase("Table")||userInput.equals("1")){
 
                 //detail the table and czar hops' instructions
                 System.out.println("\"What are you waiting for? Hop to it already.\"");
@@ -111,7 +111,7 @@ public class DiningRoom {
                 //offer different options based on if the chickens gave instructions
                 if(chickenContact){
                     System.out.println("What would you like to observe?");
-                    System.out.println("1. Lightswitch    2. Rabbit Cage    3. Table    4. Living Room");
+                    System.out.println("1. Table    2. Living Room    3. Lightswitch    4. Rabbit Cage");
 
                     //Receive the user's input
                     userInput = myScan.nextLine();
@@ -128,14 +128,14 @@ public class DiningRoom {
             }
 
             //if the player chooses the egg quests, ensure that they have met the chickens
-            else if(userInput.equalsIgnoreCase("Lightswitch") && chickenContact){
+            else if((userInput.equalsIgnoreCase("Lightswitch")||userInput.equals("3")) && chickenContact){
 
                 //return the correct location
                 return "Lightswitch";
             }
 
             //ensure the chicken contact
-            else if(userInput.equalsIgnoreCase("Rabbit Cage") && chickenContact){
+            else if((userInput.equalsIgnoreCase("Rabbit Cage")||userInput.equals("4")) && chickenContact){
 
                 //return the correct location
                 return "Rabbit Cage";
@@ -154,6 +154,6 @@ public class DiningRoom {
         }
 
         //Go to where player specifies
-        return userInput;
+        return "Living Room";
     }
 }

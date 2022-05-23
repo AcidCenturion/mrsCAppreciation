@@ -34,11 +34,12 @@ public class UtilitiesRoom {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Washing Machine, Dryer
         //Options to move to a different scene: Inspect Boxes, Return to Living Room
-        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equalsIgnoreCase("Inspect Boxes"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equals("4")
+                || userInput.equalsIgnoreCase("Inspect Boxes") || userInput.equals("3"))){
 
             //If the input was the Washing Machine dead-end scenes,
             //detail the Washing Machine and return to the Utilities Room scene afterwards
-            if(userInput.equalsIgnoreCase("Washing Machine")){
+            if(userInput.equalsIgnoreCase("Washing Machine") || userInput.equals("1")){
 
                 //Print the dialogue about the Washing Machine
                 System.out.println("Just the average everyday washing machine. It came in a pair with the dryer, ");
@@ -56,7 +57,7 @@ public class UtilitiesRoom {
 
             //If the input was the Dryer dead-end scenes,
             //detail the Dryer scene and return to the Utilities Room scene afterwards
-            else if(userInput.equalsIgnoreCase("Dryer")){
+            else if(userInput.equalsIgnoreCase("Dryer") || userInput.equals("2")){
 
                 //Print the dialogue about the Dryer
                 System.out.println("I take a moment to relish in the greatness that is the dryer. I love wearing ");
@@ -84,6 +85,14 @@ public class UtilitiesRoom {
         }
 
         //Go to where player specifies
-        return userInput;
+        if(userInput.equals("3")){
+            return "Inspect Boxes";
+        }
+        else if(userInput.equals("4")){
+            return "Living Room";
+        }
+        else{
+            return userInput;
+        }
     }
 }

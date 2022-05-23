@@ -30,7 +30,7 @@ public class UnlockedBasement {
             System.out.println("eerily empty...");
             System.out.println();
             System.out.println("What would you like to observe?");
-            System.out.println("1. Inspect Altars    2. Living Room");
+            System.out.println("1. Living Room    2. Inspect Altars");
         }
 
         //if the player does not have a light, kick them back out to living room
@@ -56,11 +56,11 @@ public class UnlockedBasement {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Inspect Altars
         //Options to move to a different scene: Living Room
-        while(!(userInput.equalsIgnoreCase("Living Room"))){
+        while(!(userInput.equalsIgnoreCase("Living Room") || userInput.equals("1"))){
 
             //If the input was the Inspect Altars dead-end scene,
             //detail the Altars and return to the Unlocked Basement scene afterwards
-            if(userInput.equalsIgnoreCase("Inspect Altars") || light){
+            if((userInput.equalsIgnoreCase("Inspect Altars") || userInput.equals("2")) && light){
 
                 //if the player has all four eggs
                 if(egg1 && egg2 && egg3 && egg4){
@@ -88,7 +88,7 @@ public class UnlockedBasement {
                 //Determine where the player wants to go next
                 System.out.println();
                 System.out.println("What would you like to observe?");
-                System.out.println("1. Inspect Altars    2. Living Room");
+                System.out.println("1. Living Room    2. Inspect Altars");
                 userInput = myScan.nextLine();
                 System.out.println();
             }
@@ -106,6 +106,6 @@ public class UnlockedBasement {
         }
 
         //Go to where player specifies
-        return userInput;
+        return "Living Room";
     }
 }

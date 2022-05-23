@@ -44,11 +44,11 @@ public class Nightstand {
         //If it was not, ask for a new input until a proper input is given
         //Dead-end Scenes: Letter, Flashlight
         //Options to move to a different scene: Return to Bedroom
-        while(!userInput.equalsIgnoreCase("Bedroom")){
+        while(!(userInput.equalsIgnoreCase("Bedroom") || userInput.equals("3"))){
 
             //If the input was the Letter dead-end scenes,
             //detail the Letter and return to the Nightstand scene afterwards
-            if(userInput.equalsIgnoreCase("Letter")){
+            if(userInput.equalsIgnoreCase("Letter") || userInput.equals("1")){
 
                 //Print the dialogue about the Letter
                 System.out.println("I pick up the letter and look over the exterior it's in. The letter is poking ");
@@ -73,7 +73,7 @@ public class Nightstand {
 
             //If the input was the Flashlight dead-end scenes,
             //detail the Flashlight scene and return to the Nightstand scene afterwards
-            else if(userInput.equalsIgnoreCase("Flashlight")){
+            else if(userInput.equalsIgnoreCase("Flashlight") || userInput.equals("2")){
 
                 //Print the dialogue about the Nightstand
                 System.out.println("You never know when you’re going to need to see in the dark. I’ll take this ");
